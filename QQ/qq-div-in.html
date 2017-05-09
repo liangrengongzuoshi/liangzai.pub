@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="">
+		<title>求求表情expression</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			body{
+				font-size:12px;
+				font-family:"微软雅黑";
+				color:#666;
+			}
+			.qq-bq-box{
+				margin:50px auto;
+				width:502px;
+			}
+			.qq{
+				width:502px;
+				height:210px;
+				border:1px solid #bbb;
+				border-radius:3px;
+				box-shadow:0 0 3px #9b9b9b;
+				display:none;
+			}
+			.qq .list-bq{
+				width:119px;
+				height:210px;
+				background:#f6f6f6;
+				border-right:1px solid #ccc;
+				float:left;
+			}
+			.qq .list-bq li{
+				list-style:none;
+				border-bottom:1px solid #d7d7d7;
+				background:#f6f6f6;
+				line-height:28px;
+				text-align:center;
+				cursor:pointer;
+			}
+			.qq .list-bq li.hover{
+				background:#fff;
+			}
+			.qq .list-bq li a{
+				text-decoration:none;
+				color:#8b8b8b;
+			}
+			.qq .list-bq li a:hover{
+				color:#ff80c0;
+			}
+			.qq .qq-bq{
+				float:right;
+				width:380px;
+				height:210px;
+				padding-top:2px;
+				padding-left:2px;
+			}
+			.qq .qq-bq ul li{
+				list-style:none;
+				float:left;
+				padding:2px;
+				cursor:pointer;
+			}
+			.input-box{
+				border:1px solid #f6f6f6;
+				border-radius:3px;
+				box-shadow:0 0 3px #a2a2a2;
+			}
+			.text-show{
+				width:480px;
+				height:160px;
+				padding:10px;
+				outline:none;
+				overflow:scroll;
+				overflow-x:hidden;
+				overflow-y:auto;
+				font-size:16px;
+				line-height:20px;
+			}
+			.text-show img{
+				/*设置 可编译 div格式 里面的 图片的 格式*/
+				padding:2px;
+			}
+			.show-fabu{
+				width:502px;
+				height:40px;
+				border:0px solid #adadad;
+				position:relative;
+			}
+			.show-fabu .fabu-img{
+				margin-top:7px;
+				margin-left:5px;
+			}
+			.show-fabu .btn-fabu{
+				position:absolute;
+				top:4px;
+				right:10px;
+				width:70px;
+				height:25px;
+				float:right;
+				border:1px solid #bcbcbc;
+				border-radius:3px;
+				background:#d8d8d8;
+				text-decoration:none;
+				text-align:center;
+				font-size:15px;
+				padding-top:5px;
+				color:#737373;
+			}
+			.show-fabu .btn-fabu:hover{
+				background:#fafafa;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function opeanBQ(){
+				$("#MyQQ").toggle("fast");
+			}
+			$(function(){
+				$(".qq-bq").find("li").click(function(){
+					//.clone() 是复制一份   否则原来的东西会被剪贴过来。。
+					var img = $(this).find("img").clone();
+					$(".text-show").append(img);
+					$("#MyQQ").toggle("fast");
+				});
+				$(".qq-icon").find("li").click(function(){
+					//.clone() 是复制一份   否则原来的东西会被剪贴过来。。
+					var img = $(this).find("img").clone();
+					$(".text-show").append(img);
+					$("#MyQQ").toggle("fast");
+				});
+				//表情栏 标签切换
+				$(".list-bq").find("li").click(function(){
+					$(".list-bq").find("li").removeClass("hover");
+					$(this).addClass("hover");
+					$(".qq-bq").hide();
+					var to = $(this).attr("to");
+					$("#"+to).show();
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<br/>
+		<div class="qq-bq-box">
+			<div class="input-box">
+				<div class="text-show" contentEditable="true"></div>
+				<div class="show-fabu">
+					<a href="javascript:;" onclick="opeanBQ()"><img class="fabu-img" src="images/a.png" title="表情" width="25" height="26"/></a>
+					<a href="javascript:;" class="btn-fabu">发布</a>
+				</div>
+			</div>
+			<div class="qq" id="MyQQ">
+				<!--ul li 无序列表-->
+				<ul class="list-bq">
+					<li class="hover" to="qq-icon"><a href="javascript:;">默认表情</a></li>
+					<li class="" to="tu-icon"><a href="javascript:;">兔斯基</a></li>
+				</ul>
+				<div class="qq-bq" id="tu-icon" style="display:none">
+					<ul>
+						<li><img src="images/tu/1.gif" title="[肿么办]" width="25" height="25"/></li>
+						<li><img src="images/tu/2.gif" title="[扭一扭]" width="25" height="25"/></li>
+						<li><img src="images/tu/3.gif" title="[飞吻]" width="25" height="25"/></li>
+						<li><img src="images/tu/4.gif" title="[偷吃]" width="25" height="25"/></li>
+						<li><img src="images/tu/5.gif" title="[下雨]" width="25" height="25"/></li>
+						<li><img src="images/tu/6.gif" title="[睡觉]" width="25" height="25"/></li>
+						<li><img src="images/tu/7.gif" title="[枕头]" width="25" height="25"/></li>
+						<li><img src="images/tu/8.gif" title="[无趣]" width="25" height="25"/></li>
+						<li><img src="images/tu/9.gif" title="[小狗]" width="25" height="25"/></li>
+						<li><img src="images/tu/10.gif" title="[学习]" width="25" height="25"/></li>
+					</ul>
+				</div>
+				<div class="qq-bq" id="qq-icon">
+					<ul>
+						<li><img src="images/icon/0.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/1.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/2.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/3.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/4.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/5.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/6.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/7.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/8.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/9.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/10.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/11.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/12.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/13.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/14.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/15.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/16.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/17.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/18.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/19.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/20.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/21.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/22.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/23.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/24.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/25.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/26.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/27.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/28.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/29.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/30.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/31.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/32.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/33.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/34.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/35.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/36.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/37.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/38.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/39.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/40.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/41.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/42.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/43.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/44.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/45.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/46.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/47.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/48.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/49.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/51.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/52.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/53.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/54.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/55.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/56.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/57.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/58.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/59.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/60.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/61.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/62.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/63.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/64.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/65.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/66.gif" title="" width="24" height="24"/></li>
+						<li><img src="images/icon/67.gif" title="" width="24" height="24"/></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
