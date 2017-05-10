@@ -1,0 +1,30 @@
+name: 良先生
+author: liangren.com
+#baseurl: /liangren.com
+description: 良人的救赎
+github: https://github.com/liangrengongzuoshi
+#linkedin: http://www.linkedin.com
+email: crawler_vip@163.com
+
+#location: 42°2'16"N   70°12'47"W
+#disqus: diqus-username
+
+
+encoding: utf-8
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+

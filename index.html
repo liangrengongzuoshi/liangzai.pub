@@ -1,34 +1,37 @@
-<!doctype html>
-<html lang="zh-cn">
-	<head>
-		<meta charset="gbk"/>
-		<meta http-equiv="Content-type" content="">
-		<title>liangren</title>
-		<meta name="keywords" content="java,blog">
-		<meta name="description" content="liangren's blog">
-		<style type="text/css">
-			*{
-				margin:0;
-				padding:0;
-			}
-			.box{
-				margin:20px auto;
-				width:400px;
-			}
-			body{
-				font-size:16px;
-				font-family:"微软雅黑";
-				color:#666;
-			}
-		</style>
-	</head>
-	<body background="img/back.png">
-		<script src="js/mouse.js"></script>
-		<div class="box">
-			<h1>Welcome to my blog.</h2><br/><br/>
-			<h3>Just test pages.</h3>
-			<a href="htmlhub/2048/index.html" target="_blank">2048</a><br/>
-			<a href="htmlhub/qq/index.html" target="_blank">qq emoj</a>
-		</div>
-	</body>
-</html>
+---
+title: 棣栭〉
+---
+
+<div class="container">
+  <h1 align="center">棣栭〉</h1>
+{% if site.posts != empty %}
+  {% for post in site.posts limit: 3 %}
+    {% if forloop.first %}
+      {% assign add_class = 'most-recent' %}
+      {% capture fresh_tag %}
+        &nbsp;<span class="badge"><smaller>FRESH</smaller></span>
+      {% endcapture %}
+    {% endif %}
+    <ul class="homepage-posts {{ add_class }}">
+      <li>
+        <span>
+          <h4>
+            <a href="{{ site.baseurl }}/{{ post.url }}">
+              {{ post.title }}
+            </a>
+            {{ fresh_tag }}
+            <time class="pull-right">
+              {{ post.date | date_to_string | date: "%b %-d, %Y"  }}
+            </time>
+          </h4>
+        </span>
+      </li>
+    </ul>
+    {% assign add_class = '' %}
+    {% assign fresh_tag = '' %}
+  {% endfor %}
+  <ul>
+    <a href="{{ site.baseurl }}/list.html">View More...</a>
+  </ul>
+{% endif %}
+</div>
