@@ -28,7 +28,7 @@ $(function() {
         $(this).find('.post').slideToggle();
     });
     $('.head-pic').hover(function(){
-	$(this).animate();
+	$(this).animate(1000,pulse);
     });
 
 
