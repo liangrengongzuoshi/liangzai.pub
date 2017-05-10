@@ -27,4 +27,9 @@ $(function() {
     $('.project-box').click(function() {
         $(this).find('.post').slideToggle();
     });
+    $('.head-pic').hover(function(){
+	$(this).animate();
+    });
+
+
 });
