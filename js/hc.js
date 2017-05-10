@@ -27,8 +27,11 @@ $(function() {
     $('.project-box').click(function() {
         $(this).find('.post').slideToggle();
     });
-    $('.head-pic').hover(function(){
-	$(this).animate(1000,pulse);
+    $('.head-pic').mouseover(function(){
+	$(this).addClass('animated pulse');
+    });
+    $('.head-pic').mouseout(function(){
+	$(this).removeClass('animated pulse');
     });
 
 
