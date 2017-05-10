@@ -1,0 +1,1 @@
+mytext=<a href='http://www.sdust.edu.cn/',target='_blank'>山东科技大学</a>
