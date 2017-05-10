@@ -743,5 +743,21 @@ time
       height: 50%;
       font-size: small;
  }
-
 }
+/* split line   */
+
+.head-pic {
+    width: 125px;
+    border-radius: 100%;
+    transition: all 0.2s;
+    box-shadow: 3px 3px 3px #888;
+}
+
+
+
+
+
+
+
+
+
