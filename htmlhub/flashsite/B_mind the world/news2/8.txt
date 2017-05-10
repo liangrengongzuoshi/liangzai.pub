@@ -1,18 +1,16 @@
 title=自我介绍&
 &my_txt=<p align="center"><img src="B_mind the world/news2/8/1.jpg" align="center"><br><br>
-姓名：良先生 or 良仔
-学校：山东科技大学
-学院：信息科学与工程学院
-专业：计算机科学与技术
-班级：11级7班
-求求：1270972937
-邮箱：crawler_vip@163.com
-人人：好久好久好久没登过了
+Name：Mr.Liang
+University：Shandong University of Science and Technology
+College：Computer Science and Technology
+Profession：计算机科学与技术
+QQ：1270972937
+Email：crawler_vip@163.com
 爱好：睡觉？画画？笑？上网？运动？写字？聊天？
 可能还没发掘出来吧、
 优点：很坚持很坚持的写字dengdengdeng
 缺点：很坚持很坚持的到处写字dengdengdeng
-time：2013年10月
+time：2013/10
 
 　　<font color="#ff0000"><b>作品简介</b></font>
 　　该作品是山东省学生联合会官网主页，既然是学生联合会，我的理解是有官方主办学生参与，管理学生、培养学生等的一个机构。主要是面对大学生的一个联合会。
