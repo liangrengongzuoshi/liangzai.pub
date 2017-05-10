@@ -30,9 +30,10 @@ $(function() {
     $('.head-pic').mouseover(function(){
 	$(this).addClass('animated pulse');
     });
+    /*
     $('.head-pic').mouseout(function(){
 	$(this).removeClass('animated pulse');
     });
-
+    */
 
 });
