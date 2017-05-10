@@ -25,5 +25,4 @@ title=自我介绍&
 <p style="text-align:center">
 <img src="B_mind the world/news2/8/2.jpg">
 </p>
-
 </p>
