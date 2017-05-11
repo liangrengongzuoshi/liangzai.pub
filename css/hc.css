@@ -99,7 +99,6 @@ p
   margin-top:-4px;
   border-top:solid #d90006;
   transition:all .4s ease 0;
-  border-width:4px
 }
 
 .sidebar-nav
@@ -206,10 +205,7 @@ p
 
 blockquote
 {
-  border-left:2px solid #d90006;
-  border-right:2px solid #d90006;
-  margin-left:-40px;
-  margin-right:-40px;
+  border-left:2px solid #9E9E9E;
   padding-left:40px;
   background:#f3f3f7
 }
@@ -369,7 +365,7 @@ pre
 {
   font-size:35px;
   font-weight:700;
-  color:#d90006;
+  color:#607D8B;
   padding-top:15px
 }
 
@@ -387,6 +383,7 @@ img
 #article
 {
   margin-bottom:30px;
+  margin-top:30px;
   background-color:#f9f9f9;
   box-shadow:1px 1px 0 1px #e8e8e8;
   padding:10px 40px 0
