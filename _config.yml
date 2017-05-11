@@ -12,7 +12,7 @@ email: crawler_vip@163.com
 
 encoding: utf-8
 highlighter: rouge
-markdown: redcarpet
+markdown: kramdown
 redcarpet:
   extensions: ["tables"]
 
