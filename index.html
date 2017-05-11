@@ -8,9 +8,6 @@ title: 首页
   {% for post in site.posts limit: 3 %}
     {% if forloop.first %}
       {% assign add_class = 'most-recent' %}
-      {% capture fresh_tag %}
-        &nbsp;<span class="badge"><smaller>FRESH</smaller></span>
-      {% endcapture %}
     {% endif %}
     <ul class="homepage-posts {{ add_class }}">
       <li>
@@ -19,7 +16,6 @@ title: 首页
             <a href="{{ site.baseurl }}/{{ post.url }}">
               {{ post.title }}
             </a>
-            {{ fresh_tag }}
             <time class="pull-right">
               {{ post.date | date_to_string | date: "%b %-d, %Y"  }}
             </time>
@@ -30,8 +26,5 @@ title: 首页
     {% assign add_class = '' %}
     {% assign fresh_tag = '' %}
   {% endfor %}
-  <ul>
-    <a href="{{ site.baseurl }}/list.html">View More...</a>
-  </ul>
 {% endif %}
 </div>
