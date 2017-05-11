@@ -1,6 +1,101 @@
 # Mr.Liang's blog
 
-Welcome to my bolg.
-
 https://liangrengongzuoshi.github.io/liangren.com/
+
+---
+### markdown tets
+---
+
+# 标题：这是H1：#x1
+## 这是H2：#x2
+### 这是H3：#x3
+#### 这是H4：#x4
+##### 这是H5：#x5
+###### 这是H6：#x6
+
+
+## 无序列表：*、+、-
+
+* 无序号一
+* 无序号二
+* 无序号三
+
++ 一
++ 二
++ 三
+
+- 一
+- 二
+- 三
+
+1. 这是1.
+2. 这是2.
+3. 这是3.
+
+* 阅读开始
+  > 第一章
+  >> 第二章
+
+## 区块引用
+
+> 这是一个块>,
+> 还是一个块>
+>> 这是两个块>>
+>>> 这是三个块>>>
+>> #### 这是两个块>>，并加了####
+
+## 强调，一个星号包括是斜体，两个星号包括是加粗
+
+这里有*强调词用星号包括*，
+
+这里有**强调词用两个星号包括**；
+
+## 超链接
+
+This is an [baidu.com](http://baidu.com/ "这是title").
+
+> 格式：\[baidu.com\]\(http://www.baidu.com “这是title”\)
+
+#### 图像格式 ！\[图像\](http://....jpg "图像")
+![这是图像](http://baidu.com/ "这是title")
+
+
+
+## 代码块```或一个tab键缩进
+```java
+/*
+ *这是注释
+ */
+public static void main(String[] args){
+    System.out.println("Hello world.");
+}
+```
+    // 这是注释
+    public static void main(String[] args){
+        System.out.println("Hello world.");
+    }
+    
+
+### 分割线使用三个-或三个*
+---
+***
+
+
+## 表格
+
+| 姓名 | 性别 | 年龄 |
+|-----|-----|------|
+| 张三 | 男  | 11 |
+| 王五 | 男  | 22 |
+
+
+```
+格式：
+| 姓名 | 性别 | 年龄 |
+|-----|-----|------|
+| 张三 | 男  | 11 |
+| 王五 | 男  | 22 |
+```
+
+
 
