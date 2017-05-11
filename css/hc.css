@@ -384,7 +384,7 @@ img
 {
   margin-bottom:30px;
   margin-top:30px;
-  background-color:#f9f9f9;
+  background-color:#fff;
   box-shadow:1px 1px 0 1px #e8e8e8;
   padding:10px 40px 0
 }
@@ -415,7 +415,7 @@ img
 
 time
 {
-  color:#c9c9c9;
+  color:#9E9E9E;
   font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:100;
   text-shadow:1px 1px #fff
