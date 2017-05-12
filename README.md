@@ -100,6 +100,7 @@ public static void main(String[] args){
 
 
 ## 流程图
+#### 这个是有道笔记的markdown流程图语法,好像github不支持
 ```
 graph XXX       指定流程图类型：TB/BT/RL/LR。
     TB - top bottom（自上而下）
