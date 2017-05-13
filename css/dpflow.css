@@ -70,7 +70,7 @@ v\:group,v\:rect,v\:imagedata,v\:oval,v\:line,v\:polyline,v\:stroke,v\:textbox {
 	display:block;text-align:center; position:absolute;top:24px;left:-28px;width:80px;overflow:visible;text-align:center;
 	padding:0px;cursor:default;word-wrap: break-word;word-break:break-all
 }
-.GooFlow .item_mix{background:#B6F700;border-color:#C2DB4E;color:#fff}
+.GooFlow .item_mix{background:#B6F700;border-color:#C2DB4E;}
 .GooFlow div .rs_right{overflow:hidden;position:absolute;right:-1px;top:-1px;height:100%;width:6px;cursor:w-resize}
 .GooFlow div .rs_bottom{overflow:hidden;position:absolute;left:-1px;bottom:-1px;width:100%;height:6px;cursor:n-resize}
 .GooFlow div .rs_rb{
