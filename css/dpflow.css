@@ -23,13 +23,13 @@ v\:group,v\:rect,v\:imagedata,v\:oval,v\:line,v\:polyline,v\:stroke,v\:textbox {
 .GooFlow_tool_btn:hover{border-radius:3px;padding:0px;border:#99B1CE 1px solid;width:20px;height:20px;background:#fff}
 .GooFlow_tool_btn:hover i{margin:1px;border-radius:2px}
 .GooFlow_tool_btndown{
-	cursor:default;margin:3px -1px;outline:none;blr:expression(this.onFocus=this.blur());
+	cursor:default;margin:3px 1px;outline:none;blr:expression(this.onFocus=this.blur());
 	border-radius:3px;padding:2px;background:#FFBF00;display:block;
 }
 .GooFlow_tool_btndown i{display:block;overflow:hidden;width:18px;height:18px;border-radius:2px}
 
-.GooFlow_work{float:right;margin:0px 3px 3px 0px;border:#F5F5F5 1px solid;position:relative;}
-.GooFlow_work .GooFlow_work_inner{position:relative;overflow:hidden;}
+.GooFlow_work{float:right;margin:0px 3px 3px 0px;border:#F5F5F5 1px solid;position:relative;overflow:scroll;}
+.GooFlow_work .GooFlow_work_inner{background-image:url(images/gooflow_blank2.gif);position:relative;overflow:hidden;}
 .GooFlow_work .GooFlow_work_group{cursor:default;position:absolute;overflow:hidden;top:0px;left:0px}
 .GooFlow_work text{color:#fff}
 .GooFlow_area{cursor:default;position:absolute;overflow:hidden;}
@@ -40,13 +40,13 @@ v\:group,v\:rect,v\:imagedata,v\:oval,v\:line,v\:polyline,v\:stroke,v\:textbox {
 .GooFlow_work .lock label{cursor:default;}
 .GooFlow_area i{display:block;height:18px;widht:18px;top:0px;left:0px;position:absolute;cursor:pointer}
 .GooFlow_work .area_red .bg{border:1px solid red;background-color:#FF7865}
-.GooFlow_work .area_red label{color:red;background:url(dpflow_bullet.png) no-repeat 1px 1px}
+.GooFlow_work .area_red label{color:red;background:url(images/gooflow_bullet.png) no-repeat 1px 1px}
 .GooFlow_work .area_yellow .bg{border:1px solid #CD925A;background-color:#FFD564}
-.GooFlow_work .area_yellow label{color:#FFBA1D;background:url(dpflow_bullet.png) no-repeat 1px -16px}
+.GooFlow_work .area_yellow label{color:#FFBA1D;background:url(images/gooflow_bullet.png) no-repeat 1px -16px}
 .GooFlow_work .area_blue .bg{border:1px solid #347BB1;background-color:#549CDE}
-.GooFlow_work .area_blue label{color:#347BB1;background:url(dpflow_bullet.png) no-repeat 1px -33px}
+.GooFlow_work .area_blue label{color:#347BB1;background:url(images/gooflow_bullet.png) no-repeat 1px -33px}
 .GooFlow_work .area_green .bg{border:1px solid green;background-color:#84CA04}
-.GooFlow_work .area_green label{color:green;background:url(dpflow_bullet.png) no-repeat 1px -50px}
+.GooFlow_work .area_green label{color:green;background:url(images/gooflow_bullet.png) no-repeat 1px -50px}
 
 .GooFlow_work svg{display:block;position:absolute}
 .GooFlow_work v\:group{position:relative;display:block}
@@ -74,10 +74,10 @@ v\:group,v\:rect,v\:imagedata,v\:oval,v\:line,v\:polyline,v\:stroke,v\:textbox {
 .GooFlow div .rs_right{overflow:hidden;position:absolute;right:-1px;top:-1px;height:100%;width:6px;cursor:w-resize}
 .GooFlow div .rs_bottom{overflow:hidden;position:absolute;left:-1px;bottom:-1px;width:100%;height:6px;cursor:n-resize}
 .GooFlow div .rs_rb{
-	position:absolute;right:-1px;bottom:-1px;width:9px;height:9px;overflow:hidden;cursor:nw-resize;background:url(dpflow_tip.png) no-repeat 0px -8px;
+	position:absolute;right:-1px;bottom:-1px;width:9px;height:9px;overflow:hidden;cursor:nw-resize;background:url(images/gooflow_tip.png) no-repeat 0px -8px;
 }
 .GooFlow div .rs_close{
-	position:absolute;right:1px;top:1px;width:7px;height:7px;overflow:hidden;cursor:pointer;background:url(dpflow_tip.png) no-repeat 0px 0px
+	position:absolute;right:1px;top:1px;width:7px;height:7px;overflow:hidden;cursor:pointer;background:url(images/gooflow_tip.png) no-repeat 0px 0px
 }
 .GooFlow .rs_ghost{
 	position:absolute;display:none;overflow:hidden;border:#8EA4C1 1px dashed; background:#D9E8FB;
@@ -100,32 +100,32 @@ v\:group,v\:rect,v\:imagedata,v\:oval,v\:line,v\:polyline,v\:stroke,v\:textbox {
 
 .GooFlow .GooFlow_line_move{filter:Alpha(Opacity=50);-moz-opacity:0.5;opacity:0.5;overflow:hidden;position:absolute;z-index:9999;}
 .GooFlow .GooFlow_line_oper i{display:inline-block;width:15px;height:15px;margin-left:2px;cursor:pointer}
-.GooFlow .b_l1{background:url(dpflow_line_oper.png) no-repeat 1px 1px}
-.GooFlow .b_l2{background:url(dpflow_line_oper.png) no-repeat 1px -14px}
-.GooFlow .b_l3{background:url(dpflow_line_oper.png) no-repeat 1px -29px}
-.GooFlow .b_x{background:url(dpflow_line_oper.png) no-repeat 1px -44px;margin-left:10px}
+.GooFlow .b_l1{background:url(images/GooFlow_line_oper.png) no-repeat 1px 1px}
+.GooFlow .b_l2{background:url(images/GooFlow_line_oper.png) no-repeat 1px -14px}
+.GooFlow .b_l3{background:url(images/GooFlow_line_oper.png) no-repeat 1px -29px}
+.GooFlow .b_x{background:url(images/GooFlow_line_oper.png) no-repeat 1px -44px;margin-left:10px}
 
-.GooFlow .ico_cursor{background:url(dpflow_icon.png) no-repeat 2px -20px}
-.GooFlow .ico_start{background:url(dpflow_icon.png) no-repeat -19px -20px}
-.GooFlow .ico_end{background:url(dpflow_icon.png) no-repeat -39px -20px}
-.GooFlow .ico_fork{background:url(dpflow_icon.png) no-repeat -59px -20px}
-.GooFlow .ico_join{background:url(dpflow_icon.png) no-repeat -78px -20px}
-.GooFlow .ico_direct{background:url(dpflow_icon.png) no-repeat -137px -20px}
-.GooFlow .ico_group{background:url(dpflow_icon.png) no-repeat -96px -20px}
-.GooFlow .ico_complex{background:url(dpflow_icon.png) no-repeat -116px -20px}
-.GooFlow .ico_node{background:url(dpflow_icon.pngg) no-repeat -19px -45px}
-.GooFlow .ico_task{background:url(dpflow_icon.png) no-repeat 2px -45px}
-.GooFlow .ico_chat{background:url(dpflow_icon.png) no-repeat -38px -45px}
-.GooFlow .ico_state{background:url(dpflow_icon.png) no-repeat -59px -45px}
-.GooFlow .ico_plug{background:url(dpflow_icon.png) no-repeat -135px -45px}
-.GooFlow .ico_menu{background:url(dpflow_icon.png) no-repeat 1px -65px}
-.GooFlow .ico_sound{background:url(dpflow_icon.png) no-repeat -18px -65px}
-.GooFlow .ico_topo{background:url(dpflow_icon.png) no-repeat -117px -45px}
+.GooFlow .ico_cursor{background:url(images/gooflow_icon.png) no-repeat 2px -20px}
+.GooFlow .ico_start{background:url(images/gooflow_icon.png) no-repeat -19px -20px}
+.GooFlow .ico_end{background:url(images/gooflow_icon.png) no-repeat -39px -20px}
+.GooFlow .ico_fork{background:url(images/gooflow_icon.png) no-repeat -59px -20px}
+.GooFlow .ico_join{background:url(images/gooflow_icon.png) no-repeat -78px -20px}
+.GooFlow .ico_direct{background:url(images/gooflow_icon.png) no-repeat -137px -20px}
+.GooFlow .ico_group{background:url(images/gooflow_icon.png) no-repeat -96px -20px}
+.GooFlow .ico_complex{background:url(images/gooflow_icon.png) no-repeat -116px -20px}
+.GooFlow .ico_node{background:url(images/gooflow_icon.png) no-repeat -19px -45px}
+.GooFlow .ico_task{background:url(images/gooflow_icon.png) no-repeat 2px -45px}
+.GooFlow .ico_chat{background:url(images/gooflow_icon.png) no-repeat -38px -45px}
+.GooFlow .ico_state{background:url(images/gooflow_icon.png) no-repeat -59px -45px}
+.GooFlow .ico_plug{background:url(images/gooflow_icon.png) no-repeat -135px -45px}
+.GooFlow .ico_menu{background:url(images/gooflow_icon.png) no-repeat 1px -65px}
+.GooFlow .ico_sound{background:url(images/gooflow_icon.png) no-repeat -18px -65px}
+.GooFlow .ico_topo{background:url(images/gooflow_icon.png) no-repeat -117px -45px}
 
-.GooFlow .ico_open{background:url(dpflow_icon.png) no-repeat -19px 1px}
-.GooFlow .ico_new{background:url(dpflow_icon.png) no-repeat 2px 1px}
-.GooFlow .ico_reload{background:url(dpflow_icon.png) no-repeat -97px 1px}
-.GooFlow .ico_save{background:url(dpflow_icon.png) no-repeat -39px 1px}
-.GooFlow .ico_undo{background:url(dpflow_icon.png) no-repeat -58px 1px}
-.GooFlow .ico_redo{background:url(dpflow_icon.png) no-repeat -78px 1px}
-.GooFlow .ico_mutiselect{background:url(dpflow_icon.png) no-repeat -156px 1px}
+.GooFlow .ico_open{background:url(images/gooflow_icon.png) no-repeat -19px 1px}
+.GooFlow .ico_new{background:url(images/gooflow_icon.png) no-repeat 2px 1px}
+.GooFlow .ico_reload{background:url(images/gooflow_icon.png) no-repeat -97px 1px}
+.GooFlow .ico_save{background:url(images/gooflow_icon.png) no-repeat -39px 1px}
+.GooFlow .ico_undo{background:url(images/gooflow_icon.png) no-repeat -58px 1px}
+.GooFlow .ico_redo{background:url(images/gooflow_icon.png) no-repeat -78px 1px}
+.GooFlow .ico_mutiselect{background:url(images/gooflow_icon.png) no-repeat -156px 1px}

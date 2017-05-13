@@ -78,6 +78,7 @@ function GooFlow(bgDiv,property){
 		//未加代码：加入绘图工具按钮
 		this.$tool.append(
       "<a href='javascript:void(0)' type='cursor' class='GooFlow_tool_btndown' id='"+this.$id+"_btn_cursor'><i class='ico_cursor'/></a>"
+     +"<a href='javascript:void(0)' type='mutiselect' class='GooFlow_tool_btn' id='"+this.$id+"_btn_mutiselect'><i class='ico_mutiselect'/></a>"
      +"<a href='javascript:void(0)' type='direct' class='GooFlow_tool_btn' id='"+this.$id+"_btn_direct'><i class='ico_direct'/></a>"
     );
 		if(property.toolBtns&&property.toolBtns.length>0){
@@ -111,7 +112,7 @@ function GooFlow(bgDiv,property){
 	width=width-toolWidth-9;
 	height=height-headHeight-(property.haveHead? 5:8);
 	this.$bgDiv.append("<div class='GooFlow_work' style='width:"+(width)+"px;height:"+(height)+"px;"+(property.haveHead? "":"margin-top:3px")+"'></div>");
-	this.$workArea=$("<div class='GooFlow_work_inner' style='width:"+width+"px;height:"+height+"px'></div>")
+	this.$workArea=$("<div class='GooFlow_work_inner' style='width:"+width*3+"px;height:"+height*3+"px'></div>")
 		.attr({"unselectable":"on","onselectstart":'return false',"onselect":'document.selection.empty()'});
 	this.$bgDiv.children(".GooFlow_work").append(this.$workArea);
 	this.$draw=null;//画矢量线条的容器
@@ -429,13 +430,13 @@ GooFlow.prototype={
 		}
 		else{
 			this.$draw = document.createElement("v:group");
-			this.$draw.coordsize = width+","+height;
-			this.$workArea.prepend("<div class='GooFlow_work_vml' style='position:relative;width:"+width+"px;height:"+height+"px'></div>");
+			this.$draw.coordsize = width*3+","+height*3;
+			this.$workArea.prepend("<div class='GooFlow_work_vml' style='position:relative;width:"+width*3+"px;height:"+height*3+"px'></div>");
 			this.$workArea.children("div")[0].insertBefore(this.$draw,null);
 		}
 		this.$draw.id = id;
-		this.$draw.style.width = width + "px";
-		this.$draw.style.height = +height + "px";
+		this.$draw.style.width = width*3 + "px";
+		this.$draw.style.height = +height*3 + "px";
 		//绑定连线的点击选中以及双击编辑事件
 		var tmpClk=null;
 		if(GooFlow.prototype.useSVG!="")  tmpClk="g";
@@ -480,7 +481,7 @@ GooFlow.prototype={
 		});
 	},
 	initGroup:function(width,height){
-		this.$group=$("<div class='GooFlow_work_group' style='width:"+width+"px;height:"+height+"px'></div>");//存放背景区域的容器
+		this.$group=$("<div class='GooFlow_work_group' style='width:"+width*3+"px;height:"+height*3+"px'></div>");//存放背景区域的容器
 		this.$workArea.prepend(this.$group);
 		if(!this.$editable)	return;
 	  //区域划分框操作区的事件绑定
@@ -691,26 +692,12 @@ GooFlow.prototype={
 			if(!json.height||json.height<24)json.height=24;
 			if(!json.top||json.top<0)json.top=0;
 			if(!json.left||json.left<0)json.left=0;
-			//如果节点部分超出画布
-			if((json.width+json.left)>this.$workArea.width()){
-				json.left = this.$workArea.width()-json.width;
-			}
-			if((json.height+json.top)>this.$workArea.height()){
-				json.top = this.$workArea.height()-json.height;
-			}
 			var hack=0;
 			if(navigator.userAgent.indexOf("8.0")!=-1)	hack=2;
 			this.$nodeDom[id]=$("<div class='GooFlow_item"+mark+"' id='"+id+"' style='top:"+json.top+"px;left:"+json.left+"px'><table cellspacing='1' style='width:"+(json.width-2)+"px;height:"+(json.height-2)+"px;'><tr><td class='ico'><i class='ico_"+json.type+"'></i></td><td>"+json.name+"</td></tr></table><div style='display:none'><div class='rs_bottom'></div><div class='rs_right'></div><div class='rs_rb'></div><div class='rs_close'></div></div></div>");
 		}
 		else{
 			json.width=24;json.height=24;
-			//如果节点部分超出画布
-			if((json.width+json.left)>this.$workArea.width()){
-				json.left = this.$workArea.width()-json.width;
-			}
-			if((json.height+json.top)>this.$workArea.height()){
-				json.top = this.$workArea.height()-json.height;
-			}
 			this.$nodeDom[id]=$("<div class='GooFlow_item item_round"+mark+"' id='"+id+"' style='top:"+json.top+"px;left:"+json.left+"px'><table cellspacing='0'><tr><td class='ico'><i class='ico_"+json.type+"'></i></td></tr></table><div  style='display:none'><div class='rs_close'></div></div><div class='span'>"+json.name+"</div></div>");
 		}
 		if(GooFlow.prototype.color.node){
@@ -1966,13 +1953,6 @@ GooFlow.prototype={
 		if(this.$undoStack&&this.$editable){
 			this.pushOper("delArea",[id]);
 		}
-		//如果超出画布
-		if((json.width+json.left)>this.$workArea.width()){
-			json.left = this.$workArea.width()-json.width;
-		}
-		if((json.height+json.top)>this.$workArea.height()){
-			json.top = this.$workArea.height()-json.height;
-		}
 		this.$areaDom[id]=$("<div id='"+id+"' class='GooFlow_area area_"+json.color+"' style='top:"+json.top+"px;left:"+json.left+"px'><div class='bg' style='width:"+(json.width-2)+"px;height:"+(json.height-2)+"px'></div>"
 		+"<label>"+json.name+"</label><i></i><div><div class='rs_bottom'></div><div class='rs_right'></div><div class='rs_rb'></div><div class='rs_close'></div></div></div>");
 		this.$areaData[id]=json;
@@ -2000,14 +1980,14 @@ GooFlow.prototype={
 		w-=39;
 		h=h-headHeight-(this.$head!=null? 5:8);
 		this.$workArea.parent().css({height:h+"px",width:w+"px"});
-		this.$workArea.css({height:h+"px",width:w+"px"});
+		this.$workArea.css({height:h*3+"px",width:w*3+"px"});
 		if(GooFlow.prototype.useSVG==""){
-			this.$draw.coordsize = w+","+h;
+			this.$draw.coordsize = w*3+","+h*3;
 		}
-		this.$draw.style.width = w + "px";
-		this.$draw.style.height = +h + "px";
+		this.$draw.style.width = w*3 + "px";
+		this.$draw.style.height = +h*3 + "px";
 		if(this.$group==null){
-			this.$group.css({height:h+"px",width:w+"px"});
+			this.$group.css({height:h*3+"px",width:w*3+"px"});
 		}
 	}
 }
@@ -2018,103 +1998,5 @@ jQuery.extend({
 		return new GooFlow(bgDiv,property);
 	}
 }); 
-//获取一个DIV的绝对坐标的功能函数,即使是非绝对定位,一样能获取到
-function getElCoordinate(dom) {
-  var t = dom.offsetTop;
-  var l = dom.offsetLeft;
-  dom=dom.offsetParent;
-  while (dom) {
-    t += dom.offsetTop;
-    l += dom.offsetLeft;
-	dom=dom.offsetParent;
-  }; return {
-    top: t,
-    left: l
-  };
-}
-//兼容各种浏览器的,获取鼠标真实位置
-function mousePosition(ev){
-	if(!ev) ev=window.event;
-    if(ev.pageX || ev.pageY){
-        return {x:ev.pageX, y:ev.pageY};
-    }
-    return {
-        x:ev.clientX + document.documentElement.scrollLeft - document.body.clientLeft,
-        y:ev.clientY + document.documentElement.scrollTop  - document.body.clientTop
-    };
-}
-//给DATE类添加一个格式化输出字串的方法
-Date.prototype.format = function(format)   
-{   
-   var o = {   
-      "M+" : this.getMonth()+1, //month  
-      "d+" : this.getDate(),    //day  
-      "h+" : this.getHours(),   //hour  
-      "m+" : this.getMinutes(), //minute  
-      "s+" : this.getSeconds(), //second  ‘
-	  //quarter  
-      "q+" : Math.floor((this.getMonth()+3)/3), 
-      "S" : this.getMilliseconds() //millisecond  
-   }   
-   if(/(y+)/.test(format)) format=format.replace(RegExp.$1,(this.getFullYear()+"").substr(4 - RegExp.$1.length));   
-    for(var k in o)if(new RegExp("("+ k +")").test(format))   
-      format = format.replace(RegExp.$1,   
-        RegExp.$1.length==1 ? o[k] :    
-          ("00"+ o[k]).substr((""+ o[k]).length));   
-    return format;   
-}
-//JS]根据格式字符串分析日期（MM与自动匹配两位的09和一位的9）
-//alert(getDateFromFormat(sDate,sFormat));
-function getDateFromFormat(dateString,formatString){
-	var regDate = /\d+/g;
-	var regFormat = /[YyMmdHhSs]+/g;
-	var dateMatches = dateString.match(regDate);
-	var formatmatches = formatString.match(regFormat);
-	var date = new Date();
-	for(var i=0;i<dateMatches.length;i++){
-		switch(formatmatches[i].substring(0,1)){
-			case 'Y':
-			case 'y':
-				date.setFullYear(parseInt(dateMatches[i]));break;
-			case 'M':
-				date.setMonth(parseInt(dateMatches[i])-1);break;
-			case 'd':
-				date.setDate(parseInt(dateMatches[i]));break;
-			case 'H':
-			case 'h':
-				date.setHours(parseInt(dateMatches[i]));break;
-			case 'm':
-				date.setMinutes(parseInt(dateMatches[i]));break;
-			case 's':
-				date.setSeconds(parseInt(dateMatches[i]));break;
-		}
-	}
-	return date;
-}
-//货币分析成浮点数
-//alert(parseCurrency("￥1,900,000.12"));
-function parseCurrency(currentString){
-	var regParser = /[\d\.]+/g;
-	var matches = currentString.match(regParser);
-	var result = '';
-	var dot = false;
-	for(var i=0;i<matches.length;i++){
-		var temp = matches[i];
-		if(temp =='.'){
-			if(dot) continue;
-		}
-		result += temp;
-	}
-	return parseFloat(result);
-}
 
-//将#XXXXXX颜色格式转换为RGB格式，并附加上透明度
-function brgba(hex, opacity) {
-    if( ! /#?\d+/g.test(hex) ) return hex; //如果是“red”格式的颜色值，则不转换。//正则错误，参考后面的PS内容
-    var h = hex.charAt(0) == "#" ? hex.substring(1) : hex,
-        r = parseInt(h.substring(0,2),16),
-        g = parseInt(h.substring(2,4),16),
-        b = parseInt(h.substring(4,6),16),
-        a = opacity;
-    return "rgba(" + r + "," + g + "," + b + "," + a + ")";
-}
+
