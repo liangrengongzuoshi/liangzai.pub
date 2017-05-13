@@ -13,7 +13,7 @@ body
 h1,h2,h3,h4,h5,h6
 {
   font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
-  color:#d90006
+ /* color:#d90006*/
 }
 
 h1
@@ -59,7 +59,7 @@ p
 
 .container
 {
-  width:800px;
+  /*width:800px;*/
   margin:1px auto;
 }
 
@@ -381,8 +381,10 @@ img
 
 #article
 {
+
+  width:800px;
   margin-bottom:30px;
-  margin-top:30px;
+  margin:30px auto;
   background-color:#fff;
   box-shadow:1px 1px 0 1px #e8e8e8;
   padding:10px 40px 0
