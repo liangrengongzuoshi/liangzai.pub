@@ -1,0 +1,73 @@
+---
+title: 小小工具
+---
+<div id="dpflow" class="GooFlow"></div>
+
+<script type="text/javascript">
+var jsondata={"title":"流程图",
+"nodes":
+{"demo_node_1":{"name":"登记","left":20,"top":59,"type":"start round","width":24,"height":24},
+ "demo_node_3":{"name":"分管领导批","left":335,"top":57,"type":"task","width":109,"height":40},
+ "demo_node_6":{"name":"分件","left":73,"top":60,"type":"fork","width":100,"height":24},
+ "demo_node_8":{"name":"XX科审批","left":172,"top":95,"type":"task","width":100,"height":24},
+ "demo_node_9":{"name":"XX科审批","left":171,"top":25,"type":"task","width":100,"height":24},
+ "demo_node_20":{"name":"局领导审批","left":333,"top":184,"type":"task","width":111,"height":49},
+ "demo_node_23":{"name":"打证发件","left":172,"top":198,"type":"task","width":100,"height":24},
+ "demo_node_25":{"name":"归档","left":17,"top":198,"type":"end round","width":24,"height":24}},
+"lines":
+{"demo_line_7":{"type":"sl","from":"demo_node_1","to":"demo_node_6","name":"","alt":true},
+ "demo_line_10":{"type":"lr","M":121,"from":"demo_node_6","to":"demo_node_8","name":""},
+ "demo_line_11":{"type":"lr","M":122,"from":"demo_node_6","to":"demo_node_9","name":""},
+ "demo_line_12":{"type":"lr","M":312.5,"from":"demo_node_8","to":"demo_node_3","name":""},
+ "demo_line_13":{"type":"lr","M":312.5,"from":"demo_node_9","to":"demo_node_3","name":""},
+ "demo_line_21":{"type":"sl","from":"demo_node_3","to":"demo_node_20","name":""},
+ "demo_line_24":{"type":"sl","from":"demo_node_20","to":"demo_node_23","name":""},
+ "demo_line_26":{"type":"sl","from":"demo_node_23","to":"demo_node_25","name":""}},"areas":{},"initNum":28};
+var property={
+	headLabel:true,
+	initLabelText:"流程图",
+	width:1100,
+	height:800,
+	toolBtns:["start","end","task","fork","join","chat","state"],
+	haveHead:true,
+	headBtns:["undo","redo","reload"],
+	haveTool:true,
+	haveGroup:true,
+	useOperStack:true 
+};
+var remark={
+	cursor:"选择指针",
+	direct:"转换连线",
+	start:"开始结点",
+	end:"结束结点",
+	task:"任务结点",
+	node:"自动结点",
+	chat:"决策结点",
+	state:"状态结点",
+	plug:"附加插件",
+	fork:"分支结点",
+	join:"联合结点",
+	complex:"复合结点",
+	group:"组织划分框编辑开关"
+};
+var demo;
+$(document).ready(function(){
+	demo=$.createGooFlow($("#dpflow"),property);
+	demo.setNodeRemarks(remark);
+	demo.loadData(jsondata);
+
+	demo.onFreshClick=function(){
+		swal({
+		  title: "",
+		  text: "该操作会清空流程图，确定清空吗？！",
+		  type: "warning",
+		  showCancelButton: true,
+		  confirmButtonColor: "#DD6B55",
+		  confirmButtonText: "确定",
+		  cancelButtonText: "取消",
+		},function(){
+			demo.clearData();
+		});
+	}
+});
+</script> 

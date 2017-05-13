@@ -6,13 +6,14 @@
   {% include header.html %}
   </head>
   <body>
+    {% include scripts.html %}
     <div id = "wrapper">
       {%include navigation.html %}
-      <div class="container">
+      <!--<div class="container">
         {{ content }}
-      </div>
+      </div>-->
+	{{ content}}
       <!--{% include footer.html %}-->
     </div>
-    {% include scripts.html %}
   </body>
 </html>
