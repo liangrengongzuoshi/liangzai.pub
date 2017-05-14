@@ -1,4 +1,4 @@
-name: Mr.Liang
+name: 良仔的博客
 author: liangren.com
 #baseurl: /liangren.com
 keywords: java,github,git,jekyll,gollum,jquery,flash,良先生,良仔
@@ -6,11 +6,9 @@ description: 一个小白码农的博客
 github: https://github.com/liangrengongzuoshi
 email: crawler_vip@163.com
 
-#location: 42°2'16"N   70°12'47"W
-#disqus: diqus-username
 
 encoding: utf-8
-highlighter: rouge
+#highlighter: rouge
 markdown: kramdown
 redcarpet:
   extensions: ["tables"]

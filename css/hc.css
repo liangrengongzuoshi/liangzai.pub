@@ -29,11 +29,17 @@ p {
 	font-weight: 200
 }
 .posts {
-	font-size: 20px;
 	list-style: none;
 	font-weight: lighter;
 	line-height: 250%;
-	padding-bottom: 30px
+	padding-bottom: 30px;
+	padding-left:0px;
+}
+span.blog-title{
+	font-size:20px;
+}
+span.blog-time{
+	font-size:16px;
 }
 .homepage-posts {
 	list-style: none
@@ -276,7 +282,9 @@ img {
 	max-width: 100%;
 }
 #article {
+/*
 	width: 800px;
+*/
 	margin-bottom: 30px;
 	margin: 30px auto;
 	background-color: #fff;

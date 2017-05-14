@@ -6,7 +6,10 @@ title: 博客
   <h1 align="center">随手记笔</h1>
   <ul class="posts">
     {% for post in site.posts %}
-    <li><span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time class="pull-right post-list">{{ post.date | date_to_string | date: "%b %-d, %Y"  }}</h4></time></span></span></li>
+    <li>
+	<span class="blog-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></span>
+	<span class="blog-time"><time class="pull-right post-list">{{ post.date | date_to_string | date: "%b %-d, %Y"  }}</h4></time></span>
+    </li>
     {% endfor %}
   </ul>
 </div>
