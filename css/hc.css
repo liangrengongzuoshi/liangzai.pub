@@ -537,8 +537,12 @@ time {
 	width: 125px;
 	border-radius: 100%;
 	transition: all 0.2s;
-	box-shadow: 0px 0px 10px 0px #888;
+	box-shadow: 0px 0px 5px 0px #888;
 	cursor: pointer;
+}
+.head-lz{
+	margin-top:10px;
+	width:50%;
 }
 .li-github {
 	margin-top: 80px;
