@@ -547,6 +547,18 @@ time {
 .li-github {
 	margin-top: 80px;
 }
+.li-see{
+	margin-top:20px;
+}
+.li-see .fa{
+	cursor:pointer;
+}
+.li-see span{
+	margin-left:5px;
+}
+.fa-eye{
+	margin-left:8px;
+}
 .dpflow-box {
 	padding-top: 35px;
 }
@@ -599,4 +611,6 @@ time {
     width:149px;
     z-index:11;
 }
+/*--------------------------gotop end--------------------------------*/
+
 
