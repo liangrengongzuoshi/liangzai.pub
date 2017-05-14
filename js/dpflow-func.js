@@ -100,3 +100,4 @@ function brgba(hex, opacity) {
         a = opacity;
     return "rgba(" + r + "," + g + "," + b + "," + a + ")";
 }
+

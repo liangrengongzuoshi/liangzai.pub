@@ -1997,6 +1997,5 @@ jQuery.extend({
 	createGooFlow:function(bgDiv,property){
 		return new GooFlow(bgDiv,property);
 	}
-}); 
-
-
+});
+ 
