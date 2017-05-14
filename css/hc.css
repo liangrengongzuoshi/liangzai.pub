@@ -553,7 +553,7 @@ time {
 .li-see .fa{
 	cursor:pointer;
 }
-.li-see span{
+.li-see i span{
 	margin-left:5px;
 }
 .fa-eye{
