@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+
+<link href="{{ site.baseurl }}/css/highlight.css" rel="stylesheet">
 <div id="article" aos="zoom-in-up">
   <div class="article-title">{{ page.title }}</div>
   <p class="meta">
@@ -12,5 +14,8 @@ layout: default
     {{ content }}
   </div>
 </div>
+
+<script src="{{ site.baseurl }}/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 {% include gotop.html %}
 {% include pager.html %}
