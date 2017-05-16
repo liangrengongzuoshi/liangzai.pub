@@ -1,6 +1,91 @@
 ---
 title: 一叶知秋
 ---
+<link href="{{ site.baseurl }}/css/tabswitch.css" rel="stylesheet">
 <div class="container">
-    <h1 align="center">一叶知秋</h1>
+   <div class="w1200"> 
+    <div class="title"> 
+     <h1><span>一叶</span>知秋</h1> 
+    </div> 
+    <ul class="important cl"> 
+     <li class="rcsp_1"> <a><span></span></a> <p>本站简介</p> <strong><i></i></strong> </li> 
+     <li class="rcsp_2"> <a><span></span></a> <p>个人信息</p> <strong style="display:none"><i></i></strong> </li> 
+     <li class="rcsp_3"> <a><span></span></a> <p>我的大学</p> <strong style="display:none"><i></i></strong> </li> 
+     <li class="rcsp_4"> <a><span></span></a> <p>工作履历</p> <strong style="display:none"><i></i></strong> </li> 
+     <li class="rcsp_5"> <a><span></span></a> <p>兴趣爱好</p> <strong style="display:none"><i></i></strong> </li> 
+     <li class="rcsp_6"> <a><span></span></a> <p>友情链接</p> <strong style="display:none"><i></i></strong> </li> 
+    </ul> 
+    <div class="contents"> 
+     <div class="cl" style="display: none;"> 
+      <div class="important_r"> 
+       <div class="study"> 
+        <h3>本站简介</h3> 
+        <span><p><font size="2">博主很懒坐等更新...</font></p></span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="cl" style="display: block;"> 
+      <div class="important_r"> 
+       <div class="study"> 
+        <h3>个人信息</h3> 
+        <span><p><span style="font-size: small;">博主很懒坐等更新...</span></p></span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="cl" style="display: none"> 
+      <div class="important_r"> 
+       <div class="study"> 
+        <h3>我的大学</h3> 
+        <span><p><span style="font-size: small;">博主很懒坐等更新...</span></p></span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="cl" style="display: none"> 
+      <div class="important_r"> 
+       <div class="study"> 
+        <h3>工作履历</h3> 
+        <span><p><span style="font-size: small;">博主很懒坐等更新...</span></p></span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="cl" style="display: none"> 
+      <div class="important_r"> 
+       <div class="study"> 
+        <h3>兴趣爱好</h3> 
+        <span><p><span style="font-size: small;">博主很懒坐等更新...</span></p></span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="cl" style="display: none"> 
+      <div class="important_r"> 
+       <div class="study"> 
+        <h3>友情链接</h3> 
+        <span><p><span style="font-size: small;">博主很懒坐等更新...</span></p></span> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
 </div>
+<script type="text/javascript">
+	$(function(){
+		var tabNum=$(".important").find("li");
+		var contentNum=$(".contents").children();
+		var timer;
+		$(tabNum).each(function(index){
+			$(this).hover(function(){
+				var that=$(this);
+				timer=window.setTimeout(function(){
+					$(contentNum).eq(index).css({"display":"block"});
+					$(contentNum).eq(index).siblings().css({"display":"none"});
+					 that.find("a").css({"background":"#FFF","color":"#fff"});
+					 that.find("strong").show();
+					 that.siblings().find("strong").hide();
+					 that.siblings().find("a").css({"background":"#fff","color":"black"});
+				},100);
+			},function(){
+				window.clearTimeout(timer);
+			});
+		});
+	});
+</script> 

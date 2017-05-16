@@ -1,0 +1,53 @@
+@charset "utf-8";
+ul,li{list-style:none;}
+a { color: #333;text-decoration: none;}
+/*one stare*/
+.cl:after{ content:".";display:block;height:0;clear:both;visibility:hidden;}
+.w1200{ width:810px; margin:35px auto; background:#fff;padding:20px;}
+.title{ text-align:center; padding:0px 0 15px 0;/* border-bottom:1px dashed #e0e0e0;*/}
+.title h1{ font-size:40px;}
+.title h1 span{ color:#1dd2af;}
+.title p{ font:20px/46px "Microsoft YaHei"; color:#2c3e50;}
+.title p b{color:#1dd2af;}
+.important{ padding:20px 0 0px 0px;border-top:1px dashed #e0e0e0; border-bottom:1px solid #dee1e1;}
+.important li{ float:left; margin-right:15px;margin-left:15px;}
+.important li a{ display:block;width:60px; height:60px; display:block; padding:21px;border-radius:15px;border:1px dotted #1dd2af; background:#fff;cursor:pointer;}
+.important li:hover a{ border:1px dotted #696969; background:#fff;}
+.important li span{ width:60px; height:60px; display:block;}
+.important .rcsp_1 span{ background:url("images/icon1.png") no-repeat bottom center;}
+.important .rcsp_2 span{ background:url("images/icon2.png") no-repeat bottom center;}
+.important .rcsp_3 span{ background:url("images/icon3.png") no-repeat bottom center;}
+.important .rcsp_4 span{ background:url("images/icon4.png") no-repeat bottom center;}
+.important .rcsp_5 span{ background:url("images/icon5.png") no-repeat bottom center;}
+.important .rcsp_6 span{ background:url("images/icon6.png") no-repeat bottom center;}
+.important .rcsp_7 span{ background:url("images/icon7.png") no-repeat bottom center;}
+.important .rcsp_8 span{ background:url("images/icon8.png") no-repeat bottom center;}
+.important .rcsp_9 span{ background:url("images/icon9.png") no-repeat bottom center;}
+.w1200 .important .rcsp_1:hover span, .w1200 .important .rcsp_2:hover span,.w1200 .important .rcsp_3:hover span,.w1200 .important .rcsp_4:hover span,.w1200 .important .rcsp_5:hover span,.w1200 .important .rcsp_6:hover span, .w1200 .important .rcsp_7:hover span, .w1200 .important .rcsp_8:hover span, .w1200 .important .rcsp_9:hover span{transition: background 0.3s;
+-moz-transition: background 0.3s;
+-ms-transition: background 0.3s;
+-webkit-transition: background 0.3s;
+-o-transition: background 0.3s;}
+.w1200 .important .rcsp_1:hover span{ background:url("images/icon1.png") no-repeat top center;}
+.w1200 .important .rcsp_2:hover span{ background:url("images/icon2.png") no-repeat top center;}
+.w1200 .important .rcsp_3:hover span{ background:url("images/icon3.png") no-repeat top center;}
+.w1200 .important .rcsp_4 span:hover{ background:url("images/icon4.png") no-repeat top center;}
+.w1200 .important .rcsp_5 span:hover{ background:url("images/icon5.png") no-repeat top center;}
+.w1200 .important .rcsp_6 span:hover{ background:url("images/icon6.png") no-repeat top center;}
+.w1200 .important .rcsp_7 span:hover{ background:url("images/icon7.png") no-repeat top center;}
+.w1200 .important .rcsp_8 span:hover{ background:url("images/icon8.png") no-repeat top center;}
+.w1200 .important .rcsp_9 span:hover{ background:url("images/icon9.png") no-repeat top center;}
+.important .rcsp_9{ margin-right:0px;}
+.important li p{ line-height:18px; margin-top:20px; text-align:center; display:block; color:#1dd2af;}
+.important li:hover p{ color:#333;}
+.important li strong{ border-bottom:1px solid #24d2b0; position:relative; display:block;margin-top:15px;z-index:4;}
+.important li strong i{display:none;  position:absolute; width:0px; height:0px; border:10px solid transparent;display:block;left: 50%;margin-left: -9px;border-top-color: #1dd2af;}
+.important_l{ padding:30px 60px 0 20px; float:left; width:510px; overflow: hidden;}
+.important_l img{width:450px;height:384px;}
+.important_r{ float:right; padding:30px 60px 0px 0px;width:530px; overflow: hidden; }
+.study{ padding:0px 32px;}
+.study h3{ font: bold 25px/30px "Microsoft YaHei"; color:#1dd2af; display: block; padding-bottom:15px;}
+.study span{ font:14px/18px "Microsoft YaHei";color:#535353;display: block;text-indent: 2em;}
+.study img{ display:block; width:140px; height:90px; overflow:hidden; margin-left:35%;padding-top: 10px;}
+.study .know{ background:#1dd2af; display:block; font: bold 16px/30px "Microsoft YaHei"; padding:0px 10px; border-radius:50px; height:30px; color:#FFFFFF; text-align:center; margin:0 90px; margin-top:10px;}
+/*one end*/
