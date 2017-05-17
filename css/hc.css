@@ -582,6 +582,9 @@ time {
 	width: 100%;
 	height: 100%;
 }
+.fun-box{
+	text-align:center;
+}
 /*-----------------gotop--------------------------*/
 #rocket-to-top div {
     left:0;
