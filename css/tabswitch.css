@@ -3,10 +3,8 @@ ul,li{list-style:none;}
 a { color: #333;text-decoration: none;}
 /*one stare*/
 .cl:after{ content:".";display:block;height:0;clear:both;visibility:hidden;}
-.w1200{ width:810px; margin:35px auto; background:#fff;padding:20px;}
+.w1200{ width:810px; margin:30px auto; background:#fff;padding:15px 30px;}
 .title{ text-align:center; padding:0px 0 15px 0;/* border-bottom:1px dashed #e0e0e0;*/}
-.title h1{ font-size:40px;}
-.title h1 span{ color:#1dd2af;}
 .title p{ font:20px/46px "Microsoft YaHei"; color:#2c3e50;}
 .title p b{color:#1dd2af;}
 .important{ padding:20px 0 0px 0px;border-top:1px dashed #e0e0e0; border-bottom:1px solid #dee1e1;}
