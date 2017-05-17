@@ -520,6 +520,9 @@ time {
 		background-color: #ededed;
 		margin-top: -20px;
 	}
+	#rocket-to-top{
+		display:none !important;
+	}
 }
 @media screen and (max-width: 500px) {
 	#welcome-greeting h2 {
