@@ -573,11 +573,8 @@ time {
 .fa-eye{
 	margin-left:8px;
 }
-.dpflow-box {
-	padding-top: 35px;
-}
 #dpflow {
-	margin: 0px auto;
+	margin: 15px auto;
 }
 #welcome {
 	display: block;
