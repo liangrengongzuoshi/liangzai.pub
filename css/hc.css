@@ -538,7 +538,7 @@ time {
 		padding-right:1px !important;
 	}
 	#article {
-		padding: 1px 10px 0 10px;
+		padding: 2px 10px 0 10px;
 	}
 	.showcase-wrapper {
 		width: 100%;
@@ -630,8 +630,13 @@ time {
 	text-align:center;
 	margin-top:20px;
 }
-
-
-
+#time{  
+	border: 0px solid black;
+	margin:30px auto;
+	display:block;
+}
+.time-h3{
+	margin-top:168px;
+}
 
 

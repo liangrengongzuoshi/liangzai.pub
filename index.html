@@ -1,26 +1,30 @@
 ---
 title: 良仔的博客
 ---
+<h1 align="center"><span>时光</span>荏苒</h1>
+<canvas id="time" width="200" height="200"></canvas>
+<div class="time-h3"><h3 align="center">If the time goes back, what's your choice?</h3></div>
+<script src="{{ site.baseurl }}/js/time.js"></script>
 
-<canvas id="welcome"></canvas>
+<!--<canvas id="welcome"></canvas>
+<script src="{{ site.baseurl }}/js/welcome.js"></script>-->
 
-<script src="{{ site.baseurl }}/js/welcome.js"></script>
 <script type="text/javascript">
-          function browserRedirect() {
-                var sUserAgent = navigator.userAgent.toLowerCase();
-                
-                var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-                var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-                var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-                var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-                var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-                var bIsAndroid = sUserAgent.match(/android/i) == "android";
-                var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-                var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-                if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM){
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+              
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM){
 			alert("请登录PC端查看全部功能~");
-                        window.location.href="{{ site.baseurl }}/blog.html";
-                }
+//          window.location.href="{{ site.baseurl }}/blog.html";
         }
-        browserRedirect();
+    }
+    browserRedirect();
 </script>
