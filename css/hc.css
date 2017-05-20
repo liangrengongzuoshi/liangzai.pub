@@ -496,7 +496,7 @@ time {
 		padding-top: 20px;
 	}
 	#sidebar-wrapper {
-		border-right: 4px solid #d90006;
+	/*	border-right: 4px solid #d90006;*/
 		border-top: none;
 		left: 0px;
 	}
@@ -534,6 +534,8 @@ time {
 	.container {
 		width: 100%;
 		margin: 10 auto;
+		padding-left:1px !important;
+		padding-right:1px !important;
 	}
 	#article {
 		padding: 0 10px 0 10px;
