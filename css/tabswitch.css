@@ -42,10 +42,32 @@ a { color: #333;text-decoration: none;}
 .important li strong i{display:none;  position:absolute; width:0px; height:0px; border:10px solid transparent;display:block;left: 50%;margin-left: -9px;border-top-color: #1dd2af;}
 .important_l{ padding:30px 60px 0 20px; float:left; width:510px; overflow: hidden;}
 .important_l img{width:450px;height:384px;}
-.important_r{ float:right; padding:30px 60px 0px 0px;width:530px; overflow: hidden; }
+.important_r{ float:left; padding:25px 30px 15px 0px; overflow: hidden; }
 .study{ padding:0px 32px;}
-.study h3{ font: bold 25px/30px "Microsoft YaHei"; color:#1dd2af; display: block; padding-bottom:15px;}
-.study span{ font:14px/18px "Microsoft YaHei";color:#535353;display: block;text-indent: 2em;}
-.study img{ display:block; width:140px; height:90px; overflow:hidden; margin-left:35%;padding-top: 10px;}
+.study h4{ font: bold 18px/15px "Microsoft YaHei"; color:#1dd2af; display: block; padding-bottom:15px;}
+.study span{ font:16px/18px "Microsoft YaHei";color:#535353;display: block;text-indent: 2em;line-height:30px;}
+.study img{ display:block; overflow:hidden;}
+img.pic-gif{ margin:20px auto; }
 .study .know{ background:#1dd2af; display:block; font: bold 16px/30px "Microsoft YaHei"; padding:0px 10px; border-radius:50px; height:30px; color:#FFFFFF; text-align:center; margin:0 90px; margin-top:10px;}
 /*one end*/
+div.gallery{
+	margin-top:10px;
+}
+.gallery img {
+    transition: -webkit-filter .4s, filter .4s;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+.gallery img:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+.gallery a {
+    display: inline-block;
+    overflow: hidden;
+    margin: 4px;
+    box-shadow: 0 0 4px -1px #000;
+}
+.a-site{
+	color: #428bca !important;
+}
