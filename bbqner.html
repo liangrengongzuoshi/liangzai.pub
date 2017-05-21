@@ -1,0 +1,42 @@
+---
+title: 爸爸去哪儿
+---
+<script>
+  function flashChecker() {
+    var hasFlash = 0;
+    var flashVersion = 0;
+    if (document.all) {
+      var swf = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+      if (swf) {
+        hasFlash = 1;
+        VSwf = swf.GetVariable("$version");
+        flashVersion = parseInt(VSwf.split(" ")[1].split(",")[0]);
+      }
+    } else {
+      if (navigator.plugins && navigator.plugins.length > 0) {
+        var swf = navigator.plugins["Shockwave Flash"];
+        if (swf) {
+          hasFlash = 1;
+          var words = swf.description.split(" ");
+          for (var i = 0; i < words.length; ++i) {
+            if (isNaN(parseInt(words[i]))) continue;
+            flashVersion = parseInt(words[i]);
+          }
+        }
+      }
+    }
+    return { f: hasFlash, v: flashVersion };
+  }
+  var fls = flashChecker();
+  if (fls.f) {
+	//document.write("您安装了flash,当前flash版本为: " + fls.v + ".x");
+  }else{
+	document.write("<h3 align='center'>您的浏览器没有安装flash,不能查看该页面的功能,请安装flash~</h3>"); 
+  }
+</script>
+<div class="container">
+  <div class="fun-box">
+  	<h1><span>爸爸</span>去哪儿</h1>
+	<embed id="fun-2" src="./images/bbqner.swf" width="800px" height="600px"></embed>
+  </div>
+</div>
