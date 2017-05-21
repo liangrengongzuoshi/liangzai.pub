@@ -564,6 +564,10 @@ time {
 	.important li strong{
 		display:none !important;
 	}
+	#fun{
+		width:350px !important;
+		height:325px !important;
+	}
 }
 /* split line --------------------------------------------------  */
 .head-pic {
