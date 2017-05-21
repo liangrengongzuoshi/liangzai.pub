@@ -33,7 +33,6 @@ p {
 	list-style: none;
 	font-weight: lighter;
 	line-height: 250%;
-	padding-bottom: 30px;
 	padding-left:0px;
 }
 span.blog-title{
@@ -290,7 +289,7 @@ img {
 	margin: 30px auto;
 	background-color: #fff;
 	box-shadow: 1px 1px 0 1px #e8e8e8;
-	padding: 10px 40px 0
+	padding: 10px 40px 30px;
 }
 .post {
 	padding-bottom: 30px
