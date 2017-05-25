@@ -15,6 +15,13 @@
       </div>
     </div>
 	{% include gotop.html %}
-    <script>AOS.init({easing: 'ease-out-back',duration: 1000});</script> 
+    <script>
+		AOS.init({easing: 'ease-out-back',duration: 1000});
+		window.onload = function() {
+			baguetteBox.run('.baguetteBoxThree', {
+				animation: 'fadeIn',
+			});
+		};
+	</script> 
   </body>
 </html>
