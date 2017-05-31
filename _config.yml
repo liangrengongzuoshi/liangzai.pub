@@ -24,6 +24,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-
-
-theme: jekyll-theme-leap-day
