@@ -32,11 +32,11 @@ p {
 .posts {
 	list-style: none;
 	font-weight: lighter;
-	line-height: 250%;
+	/*line-height: 250%;*/
 	padding-left:0px;
 }
 ul.posts li{
-	line-height:44px;
+	line-height:45px;
 }
 span.blog-title{
 	font-size:20px;
