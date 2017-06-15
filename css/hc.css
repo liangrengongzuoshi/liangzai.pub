@@ -35,6 +35,9 @@ p {
 	line-height: 250%;
 	padding-left:0px;
 }
+ul.posts li{
+	line-height:44px;
+}
 span.blog-title{
 	font-size:20px;
 }
