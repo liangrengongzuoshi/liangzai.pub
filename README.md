@@ -1,4 +1,4 @@
-# [Mr.Liang's blog](https://liangrengongzuoshi.github.io/liangren.com/ "良先生的博客")
+# [Mr.Liang's blog](https://liangrengongzuoshi.github.io/liangzai.pub/ "良先生的博客")
 
 http://liangzai.pub
 
