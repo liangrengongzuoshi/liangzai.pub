@@ -15,9 +15,11 @@ title: 阻塞队列BlockingQueue
 1)add(object):添加数据；如果BlockingQueue可以容纳,则返回true,否则报异常 
 2)offer(object):添加数据；如果BlockingQueue可以容纳,则返回true,否则返回false.
 3)put(object):添加数据,如果BlockQueue没有空间,则调用此方法的线程被阻断直到BlockingQueue里面有空间再继续. 
+4)addAll(objects):批量添加数据；能放进多少放多少，如果队列满则抛异常，剩余数据丢失.
 
-4)poll(_time):取走排在首位的对象,若不能立即取出,则可以等time参数规定的时间,取不到时返回null.
-5)take():取走排在首位的对象,若BlockingQueue为空,阻断进入等待状态直到Blocking有新的对象被加入为止.
+
+5)poll(_time):取走排在首位的对象,若不能立即取出,则可以等time参数规定的时间,取不到时返回null.
+6)take():取走排在首位的对象,若BlockingQueue为空,阻断进入等待状态直到Blocking有新的对象被加入为止.
 
 ```
 
@@ -42,3 +44,77 @@ LinkedBlockingQueue的数据吞吐量要大于ArrayBlockingQueue.
 
 ```	
 
+#### 生产者，消费者
+
+```
+public class Test {
+
+	private static final ArrayBlockingQueue<String> LIST = new ArrayBlockingQueue<String>(1000);
+	private static boolean isOver = false;
+
+	public static void read() {
+		while (!Thread.interrupted()) {
+			try {
+				String str = "";
+				// dosomething
+
+				LIST.put(str);
+
+				// 完成任务，将标记isOver置为true
+				// isOver = true;
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				isOver = true;
+			}
+		}
+	}
+
+	public static void process() {
+		while (!Thread.interrupted()) {
+			try {
+				String str = LIST.poll(5, TimeUnit.SECONDS);
+				if (str == null) {
+					if (isOver) {
+						System.out.println("处理完毕");
+						System.exit(0);
+					} else {
+						try {
+							Thread.sleep(1000);
+						} catch (Exception e) {
+						}
+						continue;
+					}
+				}
+				// dosomething
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	/**
+	 * 一个线程生产，多个线程消费
+	 */
+	public static void main(String[] args) {
+		Executors.newSingleThreadExecutor().submit(new Runnable() {
+			@Override
+			public void run() {
+				read();
+			}
+		});
+
+		int threadNum = 4;
+		ExecutorService es = Executors.newFixedThreadPool(threadNum);
+		for (int i = 0; i < threadNum; i++) {
+			es.execute(new Runnable() {
+				@Override
+				public void run() {
+					process();
+				}
+			});
+		}
+	}
+}
+
+```
