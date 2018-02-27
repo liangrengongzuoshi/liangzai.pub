@@ -34,8 +34,13 @@ layout: default
 <!--
 <div id="uyan_frame"></div>
 <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133540"></script>
-<!-- UY END -->
 -->
+<!-- UY END -->
+
+<script src="{{ site.baseurl }}/js/highlight.min.js"></script>
+<script src="{{ site.baseurl }}/js/fokus.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{% include pager.html %}
 
 <!-- gitment begin -->
 <div id="gitment"></div>
@@ -53,10 +58,4 @@ var gitment=new Gitment({
 });
 gitment.render('gitment');
 </script>
-
 <!-- gitment end -->
-
-<script src="{{ site.baseurl }}/js/highlight.min.js"></script>
-<script src="{{ site.baseurl }}/js/fokus.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-{% include pager.html %}
