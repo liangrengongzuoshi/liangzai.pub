@@ -5,6 +5,24 @@ title: 你吐我槽
   <h1 align="center"><span>文明</span>吐槽</h1>
   <div class="div-talk-pic"><img alt="文明吐槽" title="文明吐槽" src="{{ site.baseurl }}/images/xu.gif"></div>
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+
+  <!-- gitment begin -->
+  <div id="gitment"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+  var gitment=new Gitment({
+		id:'talk',
+		owner:'liangrengongzuoshi',
+		repo:'liangzai.pub',
+		oauth:{
+			client_id:'9904ca6019f3a948d4f3',
+			client_secret:'86bec38ca036c9e8b5890613051d69f6fd0d7a4e'
+		}
+  });
+  gitment.render('gitment');
+  </script>
+  <!-- gitment end -->
 </div>
 <!--
 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
@@ -25,22 +43,3 @@ title: 你吐我槽
 <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133540"></script>
 -->
 <!-- UY END -->
-
-
-<!-- gitment begin -->
-<div id="gitment"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment=new Gitment({
-		id:'talk',
-		owner:'liangrengongzuoshi',
-		repo:'liangzai.pub',
-		oauth:{
-			client_id:'9904ca6019f3a948d4f3',
-			client_secret:'86bec38ca036c9e8b5890613051d69f6fd0d7a4e'
-		}
-});
-gitment.render('gitment');
-</script>
-<!-- gitment end -->
