@@ -1,6 +1,6 @@
 ---
 layout: post
-title: java-thread-pool
+title: thread-pool(java)
 ---
 
 
