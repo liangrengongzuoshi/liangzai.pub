@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Storm Error Record
+title: Storm Error Record
 ---
 
 
@@ -27,7 +27,7 @@ b.s.d.supervisor [INFO] Launching worker with assignment #backtype.storm.daemon.
 #GC导致程序暂停，Nimbus收不到Supervisor的心跳；
 #Nimbus认为worker死掉，并重启topology;
 
-#频繁GC或GC时间过长有可能是分配内存较小，可适当加大分配内存；
+#频繁GC或GC时间过长有可能是分配内存较小，可适当加大分配内存或优化程序等；
 
 
 // 增加心跳超时时间
