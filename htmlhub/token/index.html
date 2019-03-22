@@ -21,7 +21,9 @@
 		var timeB = timeE - 10000;
 		jc = jc.replace("timeBegin", timeB);
 		jc = jc.replace("timeEnd", timeE);
-		document.getElementById('token').innerHTML = Rohr_Opt.reload2(jc); 
+		var token = Rohr_Opt.reload2(jc);
+		document.getElementById('token').innerHTML = token; 
+		alert("token=" + token);
 	</script>
  </body>
 </html>
