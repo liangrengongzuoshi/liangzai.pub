@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>rohr</title>
+ </head>
+ <body>
+	<span id="token"></span>
+	<script>
+		var Rohr_Opt = new Object;
+		Rohr_Opt.Flag = {
+		  flag: 100043
+		};
+		Rohr_Opt.LogVal = "rohrdata";
+	</script>
+	<script src="rohr.min.js"></script>
+	<script>
+		var jc = '{"rId":{"flag":100043},"ver":"1.0.6","ts":timeBegin,"cts":timeEnd,"brVD":[1920,158],"brR":[[1920,1080],[1920,1040],24,24],"bI":["https://epassport.meituan.com/account/unitivelogin?bg_source=3&service=waimai&platform=2&continue=http://e.waimai.meituan.com/v2/epassport/entry&left_bottom_link=%2Faccount%2Funitivesignup%3Fbg_source%3D3%26service%3Dwaimai%26platform%3D2%26continue%3Dhttp%3A%2F%2Fe.waimai.meituan.com%2Fv2%2Fepassport%2FsignUp%26extChannel%3Dwaimaie%26ext_sign_up_channel%3Dwaimaie&right_bottom_link=%2Faccount%2Funitiverecover%3Fbg_source%3D3%26service%3Dwaimai%26platform%3D2%26continue%3Dhttp%3A%2F%2Fe.waimai.meituan.com%2Fv2%2Fepassport%2FchangePwd",""],"mT":["1013,241","1013,241","1014,241","1015,241","1016,241","1017,241","1018,241","1019,241","1025,242","1029,242","1080,253","1096,256","1144,263","1304,206","970,135","955,210","1023,165","1042,151","1057,138","1061,135","1062,134","1059,306","1061,305","1062,304","1063,303","1063,304","1063,306","149,306","151,303","151,300"],"kT":["\u0012,BUTTON","\u0012,BUTTON","4,INPUT","4,INPUT","3,INPUT","3,INPUT","2,INPUT","2,INPUT","1,INPUT","1,INPUT","\u0012,BODY"],"aT":["1013,178,BUTTON","600,258,HTML","984,186,BUTTON","881,139,INPUT","906,103,INPUT"],"tT":[],"aM":"","sign":"eJwFwcEKgCAMANB/8eDRQcfAUx8SI1cOdBOdhX/fey76og/LoWIsk2I2azsAhQ+5IodKbBMlXFrh3YAajtG0G5BYX16lrBOn5Tgl0c1Cyf0aeR9k"}';
+
+		var timeE = new Date().getTime();
+		var timeB = timeE - 10000;
+		jc = jc.replace("timeBegin", timeB);
+		jc = jc.replace("timeEnd", timeE);
+		document.getElementById('token').innerHTML = Rohr_Opt.reload2(jc); 
+	</script>
+ </body>
+</html>
