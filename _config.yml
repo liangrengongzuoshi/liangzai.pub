@@ -1,6 +1,6 @@
 name: 良仔的博客
 author: liangzai.pub
-baseurl: /liangzai.pub
+#baseurl: /liangzai.pub
 keywords: java,github,git,jekyll,gollum,jquery,flash,良先生,良仔
 description: 一个小白码农的博客
 github: https://github.com/liangrengongzuoshi
