@@ -1,0 +1,235 @@
+@charset "gbk";
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	outline:none;
+	transition:all 300ms ease 0ms;
+}
+body{
+	font-size:12px;
+	font-family:"微软雅黑";
+	color:#666;
+	background:url("../images/bg.png");
+}
+img{
+	border:none;
+	display:block;
+}
+ul li{
+	list-style:none;
+}
+/*--head-box--开始*/
+.head-box{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:80px;
+	background:#fff;
+	border-bottom:#f2f2f2;
+	box-shadow:0 0 20px #555555;
+	z-index:100;
+}
+.head{
+	width:1000px;
+	height:80px;
+	border:0px solid red;
+	margin:0 auto;
+	position:relative;
+}
+.logo{
+	width:105px;
+	height:80px;
+	cursor:pointer;
+	border:0px solid red;
+	margin-left:5px;
+	margin-right:25px;
+	float:left;
+}
+.logo img{
+	margin-left:12px;
+	margin-top:8px;
+}
+.logo p{
+	font-size:16px;
+	font-family:"楷体";
+	color:#00f;
+	font-weight:600;
+}
+.logo p:hover{
+	color:#000;
+}
+.head ul li{
+	float:left;
+	width:110px;
+	height:76px;
+	text-align:center;
+	background:#fff;
+	cursor:pointer;
+}
+.head ul li:hover{
+	border:1px solid #fcfcfc;
+	box-shadow:0 3px #3366cc;
+	background:#f7f7f7;
+}
+.head .focus{
+	border:1px solid #fcfcfc;
+	box-shadow:0 3px #3366cc;
+	background:#f7f7f7;
+}
+.head ul li a{
+	margin-top:25px;
+	text-decoration:none;
+	font-size:22px;
+	font-family:"楷体";
+	font-weight:600;
+	color:#666;
+	line-height:95px;
+}
+.head ul img{
+	margin-left:15px;
+	cursor:pointer;
+}
+/*--head-box--结束*/
+.body-box{
+	margin-top:150px;
+	width:100%;
+	height:auto;
+	display:block;
+	border:none;
+}
+.body-box .body{
+	position:relative;
+	width:1200px;
+	border:none;
+	margin:0 auto;
+	overflow:auto;
+}
+.body-left{
+	position:relative;
+	top:0;
+	right:0;
+	float:right;
+	width:300px;
+	border:1px solid #f9f9f9;
+	border-radius:3px;
+	box-shadow:0 0 10px #505050;
+	background:#fff;
+}
+
+/**-登陆框开始-**/
+.body-left .login{
+	width:90%;
+	height:200px;
+	margin-top:25px;
+	margin-left:12px;
+	margin-bottom:30px;
+	border:2px solid #c3c3c3;
+	border-radius:3px;
+}		
+.login h3{
+	width:100px;
+	text-align:center;
+	font-size:22px;
+	font-family:"楷体";
+}
+/*登录前*/
+.login .login-before h3{
+	margin:20px auto;
+}
+.login .login-before table{
+	margin:0 auto;
+}
+.login .login-before table tr{
+	height:20px;
+}
+/*登陆后*/
+.login .login-after h3{
+	margin:12px auto;
+}
+.login .login-after img{
+	margin:0 auto;
+}
+.Validform_checktip{
+	width:100px;
+	margin:40px auto;
+	border:none;
+}
+/**-登陆框结束-**/
+/*按钮-开始*/
+.login-btn{
+	width:130px;
+	margin:10px auto;
+}
+.login-btn a{
+	text-decoration:none;
+}
+.dlg_btn_sure,.dlg_btn_cancle{
+	width:50px;
+	height:20px;
+	float:left;
+	border:1px solid #bcbcbc;
+	border-radius:2px;
+	margin-left:10px;
+}
+.dlg_btn_sure b, .dlg_btn_cancle b{
+	font-family:"微软雅黑";
+	font-size:12px;
+	line-height:20px;
+	margin-left:13px;
+}
+.dlg_btn_sure{
+	background:#2f97ff;
+}
+.dlg_btn_sure:hover{
+	background:#84c1ff;
+}
+.dlg_btn_cancle{
+	background:#efefef;
+}
+.dlg_btn_cancle:hover{
+	background:#f9f9f9;
+}
+.dlg_btn_sure b{
+	color:#fff;
+}
+.dlg_btn_cancle b{
+	color:#939393;
+}
+/*按钮-结束*/
+
+/*--底部开始--*/
+.bottom-box{
+	margin-top:100px;
+	background:#fff;
+	padding:20px 0;
+}
+.bottom-box .foot-main{
+	margin:0 auto;
+	width:400px;
+	border:0px solid red;
+	margin-top:15px;
+}
+.foot-main p a{
+	text-decoration:none;
+	line-height:30px;
+	color:#6a6a6a;
+}
+.foot-main p a:hover{
+	color:#6600ff;
+}
+/*--底部结束--*/
+
+/*body右边开始 ---现在是左边了--*/
+.body-right-box{
+	position:relative;
+	top:0;
+	left:0;
+	float:left;
+	width:875px;
+	border:1px solid #f9f9f9;
+	border-radius:3px;
+	background:#fff;
+}
+/*body右边结束*/

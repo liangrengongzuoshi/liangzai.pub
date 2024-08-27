@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+        <meta name="Keywords" content="">
+        <meta name="Description" content="">
+        <title>山科教学平台-留言板</title>
+		<!--Html5 type 不必要属性 省略 -->
+		<link rel="stylesheet" href="css/Validform.css"></link>
+		<link rel="stylesheet" href="css/index.css"></link>
+		<link rel="stylesheet" href="css/MessageBox.css"></link>
+		<script charset="utf-8" src="js/jquery.min.js"></script>
+		<script charset="utf-8" src="js/Validform_v5.3.2.js"></script>
+		<script charset="utf-8" src="js/index.js"></script>
+		
+		<script type="text/javascript">
+			function opeanBQ(){
+				var temp = $("#MyQQ").is(":hidden");
+				if(temp){
+					$("#MyQQ").show();
+				}else{
+					$("#MyQQ").hide();
+				}
+			}
+
+			function iFrameH(){
+				var ifm = document.getElementById("main_frame");
+				var subWeb = document.frames ? document.frames["main_frame"].document:ifm.contentDocument;
+				//var subWeb = ifm.contentDocument;
+				if(ifm != null && subWeb != null){
+					ifm.height = subWeb.body.scrollHeight;
+				}
+			}
+		</script>
+    </head>
+    <body>
+		<div class="head-box">
+			<div class="head">
+				<ul class="logo">
+					<img src="images/logo.png" width="70" height="45" title="山科教学平台"/>
+					<p>山科教学平台</p>
+					
+				</ul>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="lesson_v.html" title="优质课程">优质课程</a></li>
+					<li><a href="lesson.html" title="全部课程">全部课程</a></li>
+					<li><a href="#" title="教学团队">教学团队</a></li>
+					<li><a href="#" title="教学资源">教学资源</a></li>
+					<li><a href="#" title="试卷库">试卷库</a></li>
+				</ul>
+				<ul>
+					<img src="images/nightly.gif" width="130" height="76" title="挑灯夜读"/>
+				</ul>
+			</div>
+		</div>
+
+		<div class="body-box">
+			<div class="body">
+				<div class="body-left">
+					<div class="login">
+						<ul class="login-before" >
+							<form action="" method="post" id="myform">
+								<h3>登陆</h3>
+								<table>
+									<tr>
+										<td class="login_text">账号</td>
+										<td><input type="text" name="username" datatype="*6-18" nullmsg="请输入用户名" errormsg="账号位6-18位"/></td>
+									</tr>
+									<tr>
+										<td class="login_pwd" name="">密码</td>
+										<td><input type="password" name="password" datatype="s6-18" nullmsg="请输入密码" errormsg="密码为6-18位"/></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<input type="radio" name="sex"/>管理员
+											<input type="radio" name="sex" checked/>用户
+										</td>
+									</tr>
+								</table>
+								<div class="login-btn" >
+									<a href="#" class="dlg_btn_sure">
+										<b>登录<b>
+									</a>
+									<a href="#" class="dlg_btn_cancle">
+										<b>注册<b>
+									</a>
+								</div>
+								<div class="Validform_checktip"></div>
+							</form>
+						</ul>
+						<ul class="login-after" style="display:none;">
+							<h3>良仔</h3>
+							<img src="head/head.jpg" width="100" height="100" title="头像">
+							<div class="login-btn">
+								<a href="#" class="dlg_btn_sure">
+									<b>资料<b>
+								</a>
+								<a href="#" class="dlg_btn_cancle">
+									<b>退出<b>
+								</a>
+							</div>
+						</ul>
+					</div>
+					<div class="search-box">
+						<form action="" method="post" id="search-form">
+							<div class="logo"></div>
+							<input type="text" class="text" placeholder="输入书名或书号" x-webkit-speech lang="zh-CN"/>
+							<input type="button" value="站内搜索" class="btnSubmit"/>
+							<span style="clear:both"></span><!--清除浮动-->
+						</form>
+					</div>
+					<div class="lesson-box">
+						<ul>
+							<a href="#" title="精品课程">
+								<img src="images/ke.ico" width="35" height="35"/>
+								<span>最新资源</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="movie.html" title="最新视频">
+								<img src="images/movie.ico" width="35" height="35"/>
+								<span>最新视频</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="javascript:;" title="在线交流">
+								<img src="images/chat.png" width="35" height="35"/>
+								<span>在线交流</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="#" title="在线考试">
+								<img src="images/test.png" width="35" height="35"/>
+								<span>在线考试</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="#" title="优秀作品">
+								<img src="images/good.png" width="35" height="35"/>
+								<span>优秀作品</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="body-right-box">
+					<div class="mess-box">
+						<h1>畅所欲言</h1>
+							<div class="text-box">
+								<ul>
+									<li class="mess-head">
+										<p class="head-author">作者：<span>良仔</span></p>
+										<p class="head-time">时间：<span>2014-7-5 12:23</span></p>
+									</li>
+									<li class="mess-body">
+										<span>大家好这里是 山科教学平台 留言板系统，欢迎留言。<img src="images/icon/4.gif"/></span>
+									</li>
+								</ul>
+								<ul>
+									<li class="mess-head">
+										<p class="head-author">作者：<span>良仔</span></p>
+										<p class="head-time">时间：<span>2014-7-6 14:23</span></p>
+									</li>
+									<li class="mess-body">
+										<span>山科教学平台 由 良人工作室全权开发维护。<img src="images/tu/8.gif"/></span>
+									</li>
+								</ul>
+							</div>
+						<form action="" method="post" id="chatform">
+							<div class="qq-bq-box">
+								<div class="input-author" style="display:none;">
+									<b>作者:</b>
+									<input type="text" name="author" id="author" >
+									<input type="hidden" name="message" id="hid-message">
+								</div>
+								<div class="input-box-text">
+									<div class="text-show" id="text-show-id" contentEditable="true" autofocus="autofocus"></div>
+									<div class="show-fabu">
+										<a href="javascript:;" onclick="opeanBQ()"><img class="fabu-img" src="images/biaoqing.png" title="表情" width="25" height="26"/></a>
+										<a href="javascript:;" class="btn-fabu">发布</a>
+									</div>
+								</div>
+								<div class="qq" id="MyQQ">
+									<!--ul li 无序列表-->
+									<ul class="list-bq">
+										<li class="hover" to="qq-icon"><a href="javascript:;">默认表情</a></li>
+										<li class="" to="tu-icon"><a href="javascript:;">兔斯基</a></li>
+									</ul>
+									
+									<div class="qq-bq" id="tu-icon" style="display:none">
+										<ul>
+											<li><img src="images/tu/1.gif" title="[肿么办]" width="25" height="25"/></li>
+											<li><img src="images/tu/2.gif" title="[扭一扭]" width="25" height="25"/></li>
+											<li><img src="images/tu/3.gif" title="[飞吻]" width="25" height="25"/></li>
+											<li><img src="images/tu/4.gif" title="[偷吃]" width="25" height="25"/></li>
+											<li><img src="images/tu/5.gif" title="[下雨]" width="25" height="25"/></li>
+											<li><img src="images/tu/6.gif" title="[睡觉]" width="25" height="25"/></li>
+											<li><img src="images/tu/7.gif" title="[枕头]" width="25" height="25"/></li>
+											<li><img src="images/tu/8.gif" title="[无趣]" width="25" height="25"/></li>
+											<li><img src="images/tu/9.gif" title="[小狗]" width="25" height="25"/></li>
+											<li><img src="images/tu/10.gif" title="[学习]" width="25" height="25"/></li>
+										</ul>
+									</div>
+									<div class="qq-bq" id="qq-icon">
+										<ul>
+											<li><img src="images/icon/0.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/1.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/2.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/3.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/4.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/5.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/6.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/7.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/8.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/9.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/10.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/11.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/12.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/13.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/14.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/15.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/16.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/17.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/18.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/19.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/20.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/21.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/22.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/23.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/24.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/25.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/26.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/27.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/28.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/29.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/30.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/31.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/32.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/33.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/34.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/35.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/36.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/37.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/38.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/39.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/40.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/41.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/42.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/43.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/44.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/45.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/46.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/47.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/48.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/49.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/51.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/52.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/53.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/54.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/55.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/56.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/57.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/58.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/59.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/60.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/61.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/62.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/63.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/64.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/65.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/66.gif" title="" width="24" height="24"/></li>
+											<li><img src="images/icon/67.gif" title="" width="24" height="24"/></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="actGotop">
+			<a href="#" title="返回顶部"></a>
+		</div>
+		<div class="bottom-box">
+			<div class="foot-main">
+				<p>
+					<a href="#" title="关于我们">关于我们</a>|
+					<a href="map.html" title="联系我们">联系我们</a>|
+					<a href="map.html" title="加入我们">加入我们</a>
+				</p>
+				<span>Copyright © 2013-2018</span>
+				<span>版权所有：山东科技大学 良人工作室 </span>
+			</div>
+		</div>
+
+    </body>
+</html>

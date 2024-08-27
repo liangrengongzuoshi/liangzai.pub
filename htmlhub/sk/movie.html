@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+        <meta name="Keywords" content="">
+        <meta name="Description" content="">
+        <title>山科教学平台-首页</title>
+		<!--Html5 type 不必要属性 省略 -->
+		<link rel="stylesheet" href="css/Validform.css"></link>
+		<link rel="stylesheet" href="css/index.css"></link>
+		<link rel="stylesheet" href="css/animate.css"></link>
+		<script charset="utf-8" src="js/jquery.min.js"></script>
+		<script charset="utf-8" src="js/Validform_v5.3.2.js"></script>
+		<script charset="utf-8" src="js/index.js"></script>
+		
+		<style type="text/css">
+			.less-movie{
+				overflow:auto;
+				padding-top:40px;
+				padding-bottom:10px;
+			}
+			.less-movie ul li{
+				padding:5px;
+				float:left;
+				text-align:left;
+				margin-left:30px;
+				margin-bottom:30px;
+			}
+			.less-movie ul li:hover{
+				border-radius:3px;
+				box-shadow:0 0 4px #929292;
+				cursor:pointer;
+			}
+			.less-movie ul li p{
+				text-align:center;
+				font-size:14px;
+				color:#666;
+				margin-top:10px;
+				margin-bottom:10px;
+			}
+			.less-movie ul li embed{
+				width:240px;
+				height:160px;
+				z-index:100;
+			}
+			/*弹出框开始*/
+			.move_dialog{
+				width:520px;
+				height:405px;
+				display:block;
+				position:fixed;
+				left:500px;
+				top:400px;
+				border:2px solid #a8a8a8;
+				background:#f9f9f9;
+				margin:0px auto;
+				z-index:1002;
+			}
+			.move_dialog a{
+				text-decoration:none;
+			}
+			.move_dialog .dlg_head{
+				width:520px;
+				height:37px;
+				position:relative;
+			}
+			.move_dialog .dlg_head .dlg_btn{
+				position:absolute;
+				float:right;
+				background:url("images/b-close.png") no-repeat;
+				width:16px;
+				height:16px;
+				top:10px;
+				right:10px;
+				cursor:pointer;
+			}
+			.move_dialog .dlg_head h3{
+				height:37px;
+				line-height:37px;
+				font-size:18px;
+				font-family:"微软雅黑";
+				font-weight:500;
+				background:url("images/b-bg.png");
+			}
+			.move_dialog .dlg_head h3 span{
+				display:block;
+				margin-left:10px;
+			}
+			/*身体*/
+			.move_dialog .dlg_body{
+				width:500px;
+				height:345px;
+				background:#fff;
+				margin-left:9px;
+				margin-top:10px;
+				border:1px solid #e8e8e8;
+				border-radius:2px;
+			}
+			.move_dialog .dlg_body embed{
+				width:500px;
+				height:343px;
+			}
+			/*底部*/
+			.move_dialog .dlg_end{
+				width:520px;
+				height:44px;
+			}
+			.move_dialog .dlg_end .dlg_btn_file{
+				width:125px;
+				height:37px;
+				position:absolute;
+				margin-top:10px;
+				margin-left:10px;
+				margin-right:10px;
+				border:1px solid #bcbcbc;
+				background:#efefef;
+				border-radius:2px;
+			}
+			.move_dialog .dlg_end .dlg_btn_file:hover{
+				background:#f9f9f9;
+			}
+			/*弹出框结束*/
+			.dlg_shade{
+				position:fixed;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				background:#000;
+				z-index:1001;
+				display:none;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="head-box">
+			<div class="head">
+				<ul class="logo">
+					<img src="images/logo.png" width="70" height="45" title="山科教学平台"/>
+					<p>山科教学平台</p>
+					
+				</ul>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="lesson_v.html" title="优质课程">优质课程</a></li>
+					<li><a href="lesson.html" title="全部课程">全部课程</a></li>
+					<li><a href="#" title="教学团队">教学团队</a></li>
+					<li><a href="#" title="教学资源">教学资源</a></li>
+					<li><a href="#" title="试卷库">试卷库</a></li>
+				</ul>
+				<ul>
+					<img src="images/nightly.gif" width="130" height="76" title="挑灯夜读"/>
+				</ul>
+			</div>
+		</div>
+
+		<div class="body-box">
+			<div class="body">
+				<div class="body-left">
+					<div class="login">
+						<ul class="login-before">
+							<form action="" method="post" id="myform">
+								<h3>登陆</h3>
+								<table>
+									<tr>
+										<td class="login_text">账号</td>
+										<td><input type="text" name="username" datatype="*6-18" nullmsg="请输入用户名" errormsg="账号位6-18位"/></td>
+									</tr>
+									<tr>
+										<td class="login_pwd" name="">密码</td>
+										<td><input type="password" name="password" datatype="s6-18" nullmsg="请输入密码" errormsg="密码为6-18位"/></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<input type="radio" name="sex"/>管理员
+											<input type="radio" name="sex" checked/>用户
+										</td>
+									</tr>
+								</table>
+								<div class="login-btn" >
+									<a href="#" class="dlg_btn_sure">
+										<b>登录<b>
+									</a>
+									<a href="#" class="dlg_btn_cancle">
+										<b>注册<b>
+									</a>
+								</div>
+								<div class="Validform_checktip"></div>
+							</form>
+						</ul>
+						<ul class="login-after" style="display:none;">
+							<h3>良仔</h3>
+							<img src="head/head.jpg" width="100" height="100" title="头像">
+							<div class="login-btn">
+								<a href="#" class="dlg_btn_sure">
+									<b>资料<b>
+								</a>
+								<a href="#" class="dlg_btn_cancle">
+									<b>退出<b>
+								</a>
+							</div>
+						</ul>
+					</div>
+					<div class="search-box">
+						<form action="" method="post" id="search-form">
+							<div class="logo"></div>
+							<input type="text" class="text" placeholder="输入书名或书号" x-webkit-speech lang="zh-CN"/>
+							<input type="button" value="站内搜索" class="btnSubmit"/>
+							<span style="clear:both"></span><!--清除浮动-->
+						</form>
+					</div>
+					<div class="lesson-box">
+						<ul>
+							<a href="#" title="精品课程">
+								<img src="images/ke.ico" width="35" height="35"/>
+								<span>最新资源</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="movie.html" title="最新视频">
+								<img src="images/movie.ico" width="35" height="35"/>
+								<span>最新视频</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="chat.html" title="在线交流">
+								<img src="images/chat.png" width="35" height="35"/>
+								<span>在线交流</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="#" title="在线考试">
+								<img src="images/test.png" width="35" height="35"/>
+								<span>在线考试</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="#" title="优秀作品">
+								<img src="images/good.png" width="35" height="35"/>
+								<span>优秀作品</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="body-right-box">
+					<div class="less-movie">
+						<ul>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XMzkwNzMyNjQ0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XMzkwNzMyNjQ0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XMzkwNzMyNjQ0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XMzkwNzMyNjQ0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XMzkwNzMyNjQ0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XMzkwNzMyNjQ0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XMzkwNzMyNjQ0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XMzkwNzMyNjQ0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+							<li>
+								<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="280" height="200" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+								<p>史记教学视频事例</p>
+							</li>
+
+						<ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="actGotop">
+			<a href="#" title="返回顶部"></a>
+		</div>
+		<div class="move_dialog" style="display:none;">
+			<div class="dlg_head">
+				<span title="关闭" class="dlg_btn"></span>
+				<h3><span>视频播放</span></h3>
+			</div>
+			<div class="dlg_body">
+				<embed wmode="Opaque" src="http://player.youku.com/player.php/sid/XNzM1NTc3NjA0/v.swf" allowFullScreen="true" quality="high" width="500" height="343" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			</div>
+		</div>
+		<div class="bottom-box">
+			<div class="foot-main">
+				<p>
+					<a href="#" title="关于我们">关于我们</a>|
+					<a href="map.html" title="联系我们">联系我们</a>|
+					<a href="map.html" title="加入我们">加入我们</a>
+				</p>
+				<span>Copyright © 2013-2018</span>
+				<span>版权所有：山东科技大学 良人工作室 </span>
+			</div>
+		</div>
+		<div class="dlg_shade"></div>
+    </body>
+</html>

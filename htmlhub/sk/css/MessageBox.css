@@ -1,0 +1,170 @@
+@charset "gbk";
+.mess-box{
+	width:830px;
+	border:1px solid #efefef;
+	border-radius:3px;
+	box-shadow:0 0 2px #000;
+	margin:40px auto;
+}
+.mess-box h1{
+	text-align:center;
+	margin:15px auto;
+	font-size:25px;
+	color:#747474;
+	border:none;
+}
+.mess-box .text-box ul{
+	width:780px;
+	margin:0 auto;
+	border:1px solid #f3f3f3;
+	border-radius:3px;
+	box-shadow:0 0 2px #000;
+	margin-top:15px;
+	margin-bottom:15px;
+	background:#f7f7f7;
+	cursor:pointer;
+}
+.mess-box .text-box ul:hover{
+	background:#fff;
+}
+.mess-head{
+	position:relative;
+	border-bottom:1px dotted #c3c3c3;
+	border-radius:3px;
+	height:30px;
+	overflow:auto;
+}
+.mess-head p{
+	font-size:14px;
+	margin-top:5px;
+}
+.mess-head p span{
+	font-size:14px;
+	color:#ffb366;
+}
+.mess-body span{
+	margin:0 10px;
+}
+.mess-head .head-author{
+	position:absolute;
+	left:20px;
+}
+.mess-head .head-time{
+	position:absolute;
+	right:20px;
+}
+.mess-body span{
+	display:block;
+	border:none;
+	font-size:20px;
+	font-family:"楷体";
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-top:10px;
+	color:#797979;
+}
+.qq-bq-box{
+	margin:50px auto;
+	width:502px;
+}
+.qq{
+	width:502px;
+	height:210px;
+	border:1px solid #bbb;
+	border-radius:3px;
+	box-shadow:0 0 3px #9b9b9b;
+	display:none;
+}
+.qq .list-bq{
+	width:119px;
+	height:210px;
+	background:#f6f6f6;
+	border-right:1px solid #ccc;
+	float:left;
+}
+.qq .list-bq li{
+	list-style:none;
+	border-bottom:1px solid #d7d7d7;
+	background:#f6f6f6;
+	line-height:28px;
+	text-align:center;
+	cursor:pointer;
+}
+.qq .list-bq li.hover{
+	background:#fff;
+}
+.qq .list-bq li a{
+	text-decoration:none;
+	color:#8b8b8b;
+}
+.qq .list-bq li a:hover{
+	color:#ff80c0;
+}
+.qq .qq-bq{
+	float:right;
+	width:380px;
+	height:208px;
+	padding-top:2px;
+	padding-left:2px;
+	background:#fff;
+	border-radius:3px;
+}
+.qq .qq-bq ul li{
+	list-style:none;
+	float:left;
+	padding:2px;
+	cursor:pointer;
+}
+.input-box-text{
+	width:500px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	box-shadow:0 0 3px #5a5a5a;
+	background:#fff;
+	margin:10px 0;
+}
+.text-show{
+	width:480px;
+	height:160px;
+	padding:10px;
+	outline:none;
+	overflow:scroll;
+	overflow-x:hidden;
+	overflow-y:auto;
+	font-size:16px;
+	line-height:20px;
+	autofocus:
+}
+.text-show img{
+	/*设置 可编译 div格式 里面的 图片的 格式*/
+	padding:2px;
+}
+.show-fabu{
+	width:502px;
+	height:40px;
+	border:0px solid #adadad;
+	position:relative;
+}
+.show-fabu .fabu-img{
+	margin-top:7px;
+	margin-left:5px;
+}
+.show-fabu .btn-fabu{
+	position:absolute;
+	top:4px;
+	right:10px;
+	width:70px;
+	height:25px;
+	float:right;
+	border:1px solid #bcbcbc;
+	border-radius:3px;
+	background:#d8d8d8;
+	text-decoration:none;
+	text-align:center;
+	font-size:15px;
+	padding-top:5px;
+	color:#737373;
+}
+.show-fabu .btn-fabu:hover{
+	background:#fafafa;
+}

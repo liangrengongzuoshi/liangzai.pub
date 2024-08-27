@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+        <meta name="Keywords" content="">
+        <meta name="Description" content="">
+        <title>山科教学平台-首页</title>
+		<!--Html5 type 不必要属性 省略 -->
+		<link rel="stylesheet" href="css/Validform.css"></link>
+		<link rel="stylesheet" href="css/index.css"></link>
+		<script charset="utf-8" src="js/jquery.min.js"></script>
+		<script charset="utf-8" src="js/Validform_v5.3.2.js"></script>
+		<script charset="utf-8" src="js/index.js"></script>
+		
+		<script type="text/javascript">
+			function opeanBQ(){
+				var temp = $("#MyQQ").is(":hidden");
+				if(temp){
+					$("#MyQQ").show();
+				}else{
+					$("#MyQQ").hide();
+				}
+			}
+
+			function iFrameH(){
+				var ifm = document.getElementById("main_frame");
+				var subWeb = document.frames ? document.frames["main_frame"].document:ifm.contentDocument;
+				//var subWeb = ifm.contentDocument;
+				if(ifm != null && subWeb != null){
+					ifm.height = subWeb.body.scrollHeight;
+				}
+			}
+		</script>
+    </head>
+    <body>
+		<div class="head-box">
+			<div class="head">
+				<ul class="logo">
+					<img src="images/logo.png" width="70" height="45" title="山科教学平台"/>
+					<p>山科教学平台</p>
+					
+				</ul>
+				<ul>
+					<li class="focus"><a href="index.html">首页</a></li>
+					<li><a href="lesson_v.html" title="优质课程">优质课程</a></li>
+					<li><a href="lesson.html" title="全部课程">全部课程</a></li>
+					<li><a href="#" title="教学团队">教学团队</a></li>
+					<li><a href="#" title="教学资源">教学资源</a></li>
+					<li><a href="#" title="试卷库">试卷库</a></li>
+				</ul>
+				<ul>
+					<img src="images/nightly.gif" width="130" height="76" title="挑灯夜读"/>
+				</ul>
+			</div>
+		</div>
+
+		<div class="body-box">
+			<div class="body">
+				<div class="body-left">
+					<div class="login">
+						<ul class="login-before" >
+							<form action="" method="post" id="myform">
+								<h3>登陆</h3>
+								<table>
+									<tr>
+										<td class="login_text">账号</td>
+										<td><input type="text" name="username" datatype="*6-18" nullmsg="请输入用户名" errormsg="账号位6-18位"/></td>
+									</tr>
+									<tr>
+										<td class="login_pwd" name="">密码</td>
+										<td><input type="password" name="password" datatype="s6-18" nullmsg="请输入密码" errormsg="密码为6-18位"/></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<input type="radio" name="sex"/>管理员
+											<input type="radio" name="sex" checked/>用户
+										</td>
+									</tr>
+								</table>
+								<div class="login-btn" >
+									<a href="#" class="dlg_btn_sure">
+										<b>登录<b>
+									</a>
+									<a href="#" class="dlg_btn_cancle">
+										<b>注册<b>
+									</a>
+								</div>
+								<div class="Validform_checktip"></div>
+							</form>
+						</ul>
+						<ul class="login-after"  style="display:none;">
+							<h3>良仔</h3>
+							<img src="head/head.jpg" width="100" height="100" title="头像">
+							<div class="login-btn">
+								<a href="#" class="dlg_btn_sure">
+									<b>资料<b>
+								</a>
+								<a href="#" class="dlg_btn_cancle">
+									<b>退出<b>
+								</a>
+							</div>
+						</ul>
+					</div>
+					<div class="search-box">
+						<form action="" method="post" id="search-form">
+							<div class="logo"></div>
+							<input type="text" class="text" placeholder="输入书名或书号" x-webkit-speech lang="zh-CN"/>
+							<input type="button" value="站内搜索" class="btnSubmit"/>
+							<span style="clear:both"></span><!--清除浮动-->
+						</form>
+					</div>
+					<div class="lesson-box">
+						<ul>
+							<a href="#" title="精品课程">
+								<img src="images/ke.ico" width="35" height="35"/>
+								<span>最新资源</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="movie.html" title="最新视频">
+								<img src="images/movie.ico" width="35" height="35"/>
+								<span>最新视频</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="chat.html" title="在线交流">
+								<img src="images/chat.png" width="35" height="35"/>
+								<span>在线交流</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="#" title="在线考试">
+								<img src="images/test.png" width="35" height="35"/>
+								<span>在线考试</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+						<ul>
+							<a href="#" title="优秀作品">
+								<img src="images/good.png" width="35" height="35"/>
+								<span>优秀作品</span>
+								<img class="pic-icon" src="images/jiantou.png" width="20" height="20"/>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="body-right-box">
+					<div class="body-right" id="body-right-id" >
+						<div class="R-pic-box">
+							<ul class="ul-line">
+								<h2>热门课程</h2>
+								<a href="#">更多>></a>
+							</ul>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="book/1.jpg" width="150" height="150" />
+										<p>高性能HTML5</p>
+									</a>
+								</li>
+								<li>
+									<a href="lessoninfo.html" target="_blank">
+										<img src="book/2.jpg" width="150" height="150" />
+										<p>史记</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="book/3.jpg" width="150" height="150" />
+										<p>国学治要</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="book/4.jpg" width="150" height="150" />
+										<p>怀石遇沙</p>
+									</a>
+								</li>
+							<ul>
+						</div>
+						<div class="R-note">
+							<ul class="ul-line">
+								<h2>通知公告</h2>
+								<a href="#">更多>></a>
+							</ul>
+							<ul>
+								<li>
+									<img src="images/direc.png" width="12" height="12"/>
+									<a href="#">ARM考试通知说明</a>
+									<span>2014-7-7</span>
+								</li>
+								<li>
+									<img src="images/direc.png" width="12" height="12"/>
+									<a href="#">史记上课时间更改说明</a>
+									<span>2014-7-7</span>
+								</li>
+								<li>
+									<img src="images/direc.png" width="12" height="12"/>
+									<a href="#">史记作业布置说明</a>
+									<span>2014-7-6</span>
+								</li>
+								<li>
+									<img src="images/direc.png" width="12" height="12"/>
+									<a href="#">HTML5开课时间等事宜说明</a>
+									<span>2014-7-6</span>
+								</li>
+								<li>
+									<img src="images/direc.png" width="12" height="12"/>
+									<a href="#">最新课程资料发布汇总点击查看</a>
+									<span>2014-7-5</span>
+								</li>
+								<li>
+									<img src="images/direc.png" width="12" height="12"/>
+									<a href="#">最近点击量前十视频汇总点击查看</a>
+									<span>2014-7-5</span>
+								</li>
+							</ul>
+						</div>
+						<div class="R-about">
+							<ul class="ul-line"><h2>学校简介</h2><a href="#">更多>></a></ul>
+							<ul>
+								<li><img src="images/school.jpg" width="580" height="260" title="山东科技大学"/></li>
+								<li>
+									<span>
+										<p>山东科技大学 坐落于 山东省青岛市黄岛开发区，为山东名校之首。</p>
+										<p>山科教育平台 是由 良人工作室 负责开发维护。隶属山东科技大学，版权归良人工作室所有。</p>
+										<p>良人工作室 是萌芽于山东科技大学一个软件研发工作室。其业务遍布世界五大洲七大洋！</p>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="actGotop">
+			<a href="#" title="返回顶部"></a>
+		</div>
+		<div class="bottom-box">
+			<div class="foot-main">
+				<p>
+					<a href="#" title="关于我们">关于我们</a>|
+					<a href="map.html" title="联系我们">联系我们</a>|
+					<a href="map.html" title="加入我们">加入我们</a>
+				</p>
+				<span>Copyright © 2013-2018</span>
+				<span>版权所有：山东科技大学 良人工作室 </span>
+			</div>
+		</div>
+    </body>
+</html>
