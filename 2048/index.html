@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 游戏</title>
+    <link rel="stylesheet" href="code/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2048</h1>
+            <div class="scores-container">
+                <div class="score-container">
+                    <div class="score-title">分数</div>
+                    <div id="score" class="score">0</div>
+                </div>
+                <div class="score-container">
+                    <div class="score-title">最高分</div>
+                    <div id="best-score" class="score">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-intro">
+            <p><strong>如何游玩：</strong> 使用<strong>方向键</strong>移动方块，相同数字的方块会合并成一个！</p>
+            <p><strong>道具系统：</strong> 游戏中会随机出现特殊道具卡片，带来不同的效果！</p>
+            <div class="game-controls">
+                <!-- 新游戏下拉框（合并画布选择） -->
+                <div class="grid-size-dropdown">
+                    <button id="grid-size-dropdown-btn" class="grid-size-dropdown-button">
+                        <span>新游戏</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div id="grid-size-dropdown-menu" class="grid-size-dropdown-menu" style="display: none;">
+                        <div class="grid-size-item" data-size="4">
+                            <span class="grid-size-label">4×4</span>
+                            <span class="grid-size-desc">标准</span>
+                        </div>
+                        <div class="grid-size-item" data-size="6">
+                            <span class="grid-size-label">6×6</span>
+                            <span class="grid-size-desc">中等</span>
+                        </div>
+                        <div class="grid-size-item" data-size="8">
+                            <span class="grid-size-label">8×8</span>
+                            <span class="grid-size-desc">困难</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 道具下拉框 -->
+                <div class="powerup-dropdown">
+                    <button id="powerup-dropdown-btn" class="powerup-dropdown-button">
+                        <span>道具</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div id="powerup-dropdown-menu" class="powerup-dropdown-menu" style="display: none;">
+                        <!-- 道具列表将由JavaScript动态生成 -->
+                    </div>
+                </div>
+                
+                <div id="freeze-indicator" class="freeze-indicator" style="display: none;">
+                    <span class="freeze-icon">🧊</span>
+                    <span class="freeze-text">冰冻中</span>
+                    <span id="freeze-count" class="freeze-count">5</span>
+                </div>
+                
+                <div id="petrify-indicator" class="petrify-indicator" style="display: none;">
+                    <span class="petrify-icon">🗿</span>
+                    <span class="petrify-text">石化中</span>
+                    <span id="petrify-count" class="petrify-count">3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div id="game-board" class="game-board">
+                <!-- 背景格子 -->
+                <div class="grid-container">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <!-- 数字方块容器 -->
+                <div id="tile-container" class="tile-container"></div>
+            </div>
+            
+            <div id="game-message" class="game-message">
+                <p></p>
+                <div class="message-buttons">
+                    <button class="continue-button" style="display: none;">继续游戏</button>
+                    <button class="retry-button">再试一次</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-explanation">
+            <hr>
+            <p><strong>目标：</strong>合并相同数字的方块，达到 <strong>2048</strong>！</p>
+        </div>
+    </div>
+
+    <script src="code/config.js"></script>
+    <script src="code/game.js"></script>
+</body>
+</html>
+
